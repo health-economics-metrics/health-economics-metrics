@@ -107,3 +107,10 @@ New here? Start with [opportunity cost](topics/opportunity-cost.md), [quality-ad
 ## Benchmark freshness
 
 Many quoted figures refresh annually (NHS unit costs, payment scheme prices, DORA clusters, DiGA counts, LLM prices). Each doc dates its benchmarks in-line; re-verify before using in a live business case.
+
+## Claude skills
+
+This repo ships two [Claude Skills](https://code.claude.com/docs/en/skills) — drop either into a project's `.claude/skills/` (or point Claude at this repo's `skills/`) to put this book to work directly inside an agentic coding session:
+
+- [health-economics-metrics-skill](skills/health-economics-metrics-skill/SKILL.md) — for general use: explain a concept, compute a metric from your own numbers, or assemble a multi-metric business case, grounded in this book's formulas, worked examples, and pitfalls rather than generic recall.
+- [health-economics-metrics-maintainer-skill](skills/health-economics-metrics-maintainer-skill/SKILL.md) — for maintainers of this repo: the per-topic template, README indexing conventions, and a link/sync validation checklist for adding or editing topics.
