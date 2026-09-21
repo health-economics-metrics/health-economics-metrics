@@ -1,0 +1,31 @@
+{
+  "name": "health-economics-metrics.github.io",
+  "version": "0.1.0",
+  "description": "Health Economics Metrics website",
+  "type": "module",
+  "private": "true",
+  "license": "ISC",
+  "packageManager": "pnpm@11.0.8",
+  "scripts": {
+    "sync": "node bin/sync-content.mjs && node bin/vendor-lily.mjs",
+    "sync:content": "node bin/sync-content.mjs",
+    "sync:lily": "node bin/vendor-lily.mjs",
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-static": "^3.0.10",
+    "@sveltejs/kit": "^2.70.2",
+    "@sveltejs/vite-plugin-svelte": "^7.3.0",
+    "svelte": "^5.56.9",
+    "typescript": "^5.9.3",
+    "vite": "^8.2.1"
+  },
+  "dependencies": {
+    "@lilydesignsystem/svelte-headless": "^0.1.0",
+    "@lilydesignsystem/svelte-picker-bar": "^0.1.0",
+    "github-slugger": "^2.0.0",
+    "marked": "^18.0.10"
+  }
+}

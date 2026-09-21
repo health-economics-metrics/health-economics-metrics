@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Health Economics Metrics">
+  <rect width="64" height="64" rx="12" fill="#4338ca" />
+  <!-- A rising bar chart: the book measures health value against cost. -->
+  <rect x="12" y="36" width="9" height="16" rx="2" fill="#c7d2fe" />
+  <rect x="27" y="26" width="9" height="26" rx="2" fill="#a5b4fc" />
+  <rect x="42" y="14" width="9" height="38" rx="2" fill="#ffffff" />
+</svg>
