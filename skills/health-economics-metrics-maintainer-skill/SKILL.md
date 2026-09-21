@@ -1,22 +1,47 @@
 ---
 name: health-economics-metrics-maintainer-skill
-description: Maintain this repository — add or edit a topic file under topics/ in the established structure, keep README.md's categorized index in sync, cross-link new topics into related existing docs, and validate links and naming conventions. Use when the user asks to add a new metric/topic, edit an existing one, reorganize README.md, or check the repo for broken links or inconsistent structure.
+description: Maintain this repository — add or edit a topic file under locales/<locale>/topics/ in the established structure, keep README.md's categorized index in sync, cross-link new topics into related existing docs, and validate links and naming conventions across all locales. Use when the user asks to add a new metric/topic, edit an existing one, reorganize README.md, or check the repo for broken links or inconsistent structure.
 ---
 
 # Maintaining health-economics-metrics
 
-This repo is a flat set of Markdown reference docs (`topics/*.md`) plus a categorized index
-(`README.md`). There is no build step, no frontmatter, no CI — consistency is entirely
-convention-based, so following the existing pattern precisely is the whole job.
+This repo's reference docs live under `locales/<locale>/topics/<slug>/`, one directory per topic,
+for each of 11 locales: `en-us`, `en-gb`, `en-gb-oxendict` (the canonical/default locale that
+`README.md` and the skills link into), `en-001`, `en-150`, and six full-language translations —
+`es-es`, `fr-fr`, `ru-ru`, `zh-cn`, `ar-eg`, `cy-gb`. Every topic directory contains:
+
+- `index.md` — the actual content (what used to be a flat `topics/<slug>.md` file)
+- `README.md` — a real symlink to `index.md` (`ln -s index.md README.md`), so the directory
+  renders on GitHub and resolves cleanly as a URL
+- `.locale-peer-id` — a bare hash, byte-identical across every locale's version of "the same"
+  topic. This is the cross-locale identity key: two directories with different slugs (see
+  "Slugs can differ by locale" below) are the same topic if and only if their `.locale-peer-id`
+  matches. Never regenerate or hand-edit this file — copy it verbatim when creating a new
+  locale's version of an existing topic, and never let two different topics share one.
+
+There is no build step, no CI — consistency is entirely convention-based, so following the
+existing pattern precisely (across all 11 locales, not just one) is the whole job.
+
+## Slugs can differ by locale
+
+Directory names (slugs) are usually identical across locales, but a topic whose slug contains a
+dialect-variant word is spelled per-locale: e.g. the topic at
+`locales/en-us/topics/hard-cash-releasing-savings-deficit-defense/` is the same topic as
+`locales/en-gb/topics/hard-cash-releasing-savings-deficit-defence/` and
+`locales/en-gb-oxendict/topics/hard-cash-releasing-savings-deficit-defence/` — same
+`.locale-peer-id`, different slug. The six full-language translations (es-es, fr-fr, ru-ru,
+zh-cn, ar-eg, cy-gb) keep the *English* (en-gb-oxendict) slug for every topic — only the content
+is translated, never the directory name.
 
 ## Adding a new topic
 
-1. **Filename**: kebab-case, matching the concept, e.g. `topics/net-monetary-benefit.md`. This
-   slug is also what every cross-link and the README link use — pick it first and don't rename
-   later without grepping for every reference.
+1. **Filename**: kebab-case, matching the concept, e.g.
+   `locales/en-gb-oxendict/topics/net-monetary-benefit/index.md`. This slug is also what every
+   cross-link and the README link use — pick it first and don't rename later without grepping for
+   every reference across every locale.
 
-2. **File structure** — follow this exactly (see `topics/cost-of-delay.md` or
-   `topics/quality-adjusted-life-year.md` as reference examples):
+2. **File structure** — follow this exactly (see `locales/en-gb-oxendict/topics/cost-of-delay/index.md` or
+   `locales/en-gb-oxendict/topics/quality-adjusted-life-year/index.md` as reference examples):
 
    ```markdown
    # Title (Optional Abbreviation)
@@ -57,16 +82,19 @@ convention-based, so following the existing pattern precisely is the whole job.
    `<https://...>`. No source-free claims of specific figures (rates, thresholds, prices).
    ```
 
-3. **Cross-links use bare relative filenames** (same directory), e.g. `[DORA lead
-   time](dora-metrics.md)`, not `topics/dora-metrics.md` and not an absolute path. Add a
-   reciprocal link from the new topic into any existing topic it clearly relates to, and from
-   existing topics into the new one where relevant — cross-linking is the repo's main navigation
-   mechanism.
+3. **Cross-links use `../<slug>/`** (sibling topic directory, same locale), e.g. `[DORA lead
+   time](../dora-metrics/)`, not `dora-metrics.md`, not `topics/dora-metrics.md`, and not an
+   absolute path — each topic now lives at `<locale>/topics/<slug>/index.md`, so a sibling is one
+   level up and back down. Add a reciprocal link from the new topic into any existing topic it
+   clearly relates to, and from existing topics into the new one where relevant — cross-linking is
+   the repo's main navigation mechanism. Add the new topic to every locale you're maintaining, with
+   the same `.locale-peer-id`; if you're only adding it in English for now, that's fine, but say so
+   rather than leaving other locales silently out of sync.
 
-4. **Update `README.md`**:
+4. **Update `README.md`** (links into `locales/en-gb-oxendict/topics/`, the default locale):
    - Add one bullet to the correct category section:
-     `- [Title](topics/new-file.md) — one-line hook`. The hook is a punchy, specific description
-     (often "X — Y" format), not a restatement of the title.
+     `- [Title](locales/en-gb-oxendict/topics/new-file/) — one-line hook`. The hook is a punchy,
+     specific description (often "X — Y" format), not a restatement of the title.
    - Keep bullets in the section's existing order (usually foundational → specific, or the
      order the category's narrative builds in) rather than strictly alphabetical — check the
      surrounding bullets before deciding where to insert.
@@ -86,24 +114,44 @@ convention-based, so following the existing pattern precisely is the whole job.
 
 - Preserve section headings and order even for a small fix — don't reorganize a file you're
   only correcting a number in.
-- If you change a topic's filename, grep the whole repo for the old filename (topics link to
-  each other) and for the old title text in `README.md` before finishing.
+- If you edit `locales/en-gb-oxendict/topics/<slug>/index.md` (the canonical English content),
+  the other 10 locales now disagree with it until someone updates them too — say so rather than
+  leaving it silently unsynced; you don't have to translate immediately, but flag the drift.
+- If you change a topic's slug (directory name), grep the whole repo for the old slug (topics
+  link to each other via `../<slug>/`) and for the old title text in `README.md` before
+  finishing, in every locale that uses that slug — remember slugs can legitimately differ by
+  locale (see above), so don't assume a rename in one locale applies to all of them.
 - If you change what a file covers substantially, re-check whether its README hook line and its
   category placement still fit.
+- Never touch `.locale-peer-id` when editing content — it identifies the topic across locales,
+  not a particular translation's freshness.
 
 ## Validation checklist (run before finishing any structural change)
 
 ```bash
-# Every topics/*.md file is linked from README.md, and vice versa (should be empty diffs):
-comm -23 <(ls topics/*.md | sort) <(grep -o 'topics/[a-z0-9-]*\.md' README.md | sort -u)
-comm -13 <(ls topics/*.md | sort) <(grep -o 'topics/[a-z0-9-]*\.md' README.md | sort -u)
+# Every locales/en-gb-oxendict/topics/*/ directory is linked from README.md, and vice versa
+# (should be empty diffs):
+comm -23 <(ls -d locales/en-gb-oxendict/topics/*/ | xargs -n1 basename | sort) \
+         <(grep -o 'locales/en-gb-oxendict/topics/[a-z0-9-]*/' README.md | xargs -n1 basename | sort -u)
+comm -13 <(ls -d locales/en-gb-oxendict/topics/*/ | xargs -n1 basename | sort) \
+         <(grep -o 'locales/en-gb-oxendict/topics/[a-z0-9-]*/' README.md | xargs -n1 basename | sort -u)
 
-# Every relative cross-link between topic files resolves to a real file:
-grep -rho '\]([a-z0-9-]*\.md' topics/*.md | sed 's/](//' | sort -u | while read f; do
-  [ -f "topics/$f" ] || echo "BROKEN LINK -> $f"
+# Every relative cross-link between topic files, in every locale, resolves to a real sibling
+# directory:
+for loc in locales/*/topics; do
+  slugs=$(ls -d "$loc"/*/ | xargs -n1 basename)
+  grep -rho '\]\.\./[a-z0-9.-]*/' "$loc"/*/index.md 2>/dev/null | sed 's/](\.\.\///;s#/$##' | sort -u | while read f; do
+    echo "$slugs" | grep -qx "$f" || echo "BROKEN LINK in $loc -> $f"
+  done
+done
+
+# Every topic directory has matching .locale-peer-id counts across locales (76 == 76 == ...):
+for loc in locales/*/topics; do
+  echo "$loc: $(find "$loc" -name .locale-peer-id | wc -l)"
 done
 ```
 
-Run both before treating an add/rename/reorganize task as done. Either check failing means a
-topic was added without a README entry, a README entry points at a nonexistent file, or a
-cross-link typo'd a slug.
+Run all three before treating an add/rename/reorganize task as done. A README diff failing means
+a topic was added without a README entry, or a README entry points at a nonexistent slug; a
+broken cross-link means a `../slug/` typo'd or wasn't updated after a rename; a mismatched
+peer-id count means a locale is missing a topic (or has an orphan one) relative to the others.
