@@ -2,21 +2,23 @@
 	import { base } from '$app/paths';
 	import { page } from '$app/state';
 	import { SectionList, SectionListItem } from '@lilydesignsystem/svelte-headless';
+	import { ui } from '$lib/i18n.js';
 
 	let { data } = $props();
 	const locale = $derived(page.params.locale);
+	const t = $derived(ui(locale));
 </script>
 
 <svelte:head>
-	<title>Topics A–Z — Health Economics Metrics</title>
-	<meta name="description" content="Every topic in Health Economics Metrics, listed A to Z." />
+	<title>{t.navTopicsAZ} — {data.bookTitle}</title>
+	<meta name="description" content={t.topicsMetaDescription(data.bookTitle)} />
 </svelte:head>
 
 <div class="page page-topics">
 	<header class="page-header">
-		<h1>Topics A–Z</h1>
-		<p>All {data.topicCount} topics in alphabetical order. For reading order, see the <a href="{base}/locales/{locale}/contents/">contents</a>.</p>
-		<nav class="alphabet" aria-label="Jump to letter">
+		<h1>{t.navTopicsAZ}</h1>
+		<p>{t.topicsIntroPrefix(data.topicCount)} <a href="{base}/locales/{locale}/contents/">{t.contentsLinkText}</a>.</p>
+		<nav class="alphabet" aria-label={t.jumpToLetter}>
 			{#each data.groups as group (group.letter)}
 				<a href="#letter-{group.letter}">{group.letter}</a>
 			{/each}

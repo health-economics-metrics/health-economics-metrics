@@ -1,4 +1,4 @@
-import { index } from '$lib/server/book.js';
+import { book, index } from '$lib/server/book.js';
 
 export function load({ params }) {
 	const topics = index(params.locale).sort((a, b) => a.title.localeCompare(b.title, params.locale));
@@ -12,5 +12,5 @@ export function load({ params }) {
 		else groups.push({ letter, topics: [topic] });
 	}
 
-	return { groups, topicCount: topics.length };
+	return { bookTitle: book(params.locale).title, groups, topicCount: topics.length };
 }

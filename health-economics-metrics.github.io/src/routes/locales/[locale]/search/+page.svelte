@@ -2,9 +2,11 @@
 	import { base } from '$app/paths';
 	import { page } from '$app/state';
 	import { SearchInput, SectionList, SectionListItem } from '@lilydesignsystem/svelte-headless';
+	import { ui } from '$lib/i18n.js';
 
 	let { data } = $props();
 	const locale = $derived(page.params.locale);
+	const t = $derived(ui(locale));
 
 	let query = $state('');
 
@@ -38,41 +40,40 @@
 </script>
 
 <svelte:head>
-	<title>Search — Health Economics Metrics</title>
-	<meta name="description" content="Search every topic in Health Economics Metrics." />
+	<title>{t.navSearch} — {data.bookTitle}</title>
+	<meta name="description" content={t.searchMetaDescription(data.bookTitle)} />
 </svelte:head>
 
 <div class="page page-search">
 	<header class="page-header">
-		<h1>Search</h1>
+		<h1>{t.navSearch}</h1>
 		<p>
-			Search all {data.topics.length} topics by title, part, summary, and section heading. Everything
-			runs in your browser — nothing you type leaves this page.
+			{t.searchIntro(data.topics.length)}
 		</p>
 	</header>
 
 	<form class="search-form" role="search" onsubmit={(event) => event.preventDefault()}>
 		<SearchInput
 			class="search-input"
-			label="Search topics"
+			label={t.searchInputLabel}
 			bind:value={query}
-			placeholder="QALY, discounting, cost per token…"
+			placeholder={t.searchPlaceholder}
 			autocomplete="off"
 		/>
 	</form>
 
 	<div class="search-results" aria-live="polite">
 		{#if terms.length === 0}
-			<p class="search-hint">Type to search. Try <em>QALY</em>, <em>bed days</em>, or <em>ROI</em>.</p>
+			<p class="search-hint">{@html t.searchHintEmptyHtml}</p>
 		{:else if results.length === 0}
 			<p class="search-hint">
-				No topics match <strong>{query}</strong>. Try a broader term, or browse the
-				<a href="{base}/locales/{locale}/contents/">contents</a>.
+				{t.noResultsPrefix}<strong>{query}</strong>{t.noResultsMiddle}
+				<a href="{base}/locales/{locale}/contents/">{t.contentsLinkText}</a>.
 			</p>
 		{:else}
 			<p class="search-count">
 				{results.length}
-				{results.length === 1 ? 'topic' : 'topics'}
+				{results.length === 1 ? t.resultsCountSingular : t.resultsCountPlural}
 			</p>
 			<SectionList class="search-list">
 				{#each results as topic (topic.slug)}

@@ -5,6 +5,7 @@
 	import { Footer, Header, SkipLink } from '@lilydesignsystem/svelte-headless';
 	import PickerBar from '@lilydesignsystem/svelte-picker-bar';
 	import { DEFAULT_LOCALE, localeLabel } from '$lib/locales.js';
+	import { ui } from '$lib/i18n.js';
 
 	let { data, children } = $props();
 
@@ -14,53 +15,54 @@
 	const bookTitle = $derived(data?.bookTitle ?? 'Health Economics Metrics');
 	const locales = $derived(data?.locales ?? []);
 	const locale = $derived(page.params.locale);
+	const t = $derived(ui(locale ?? DEFAULT_LOCALE));
 
 	// Contents/Topics/Search only make sense once a locale is chosen; outside
 	// a locale (the root picker, /about/) the nav only offers Home and About.
 	const topLinks = $derived(
 		locale
 			? [
-					{ href: `/locales/${locale}/`, label: 'Home' },
-					{ href: `/locales/${locale}/contents/`, label: 'Contents' },
-					{ href: `/locales/${locale}/topics/`, label: 'Topics A–Z' },
-					{ href: `/locales/${locale}/search/`, label: 'Search' },
-					{ href: '/about/', label: 'About' }
+					{ href: `/locales/${locale}/`, label: t.navHome },
+					{ href: `/locales/${locale}/contents/`, label: t.navContents },
+					{ href: `/locales/${locale}/topics/`, label: t.navTopicsAZ },
+					{ href: `/locales/${locale}/search/`, label: t.navSearch },
+					{ href: '/about/', label: t.navAbout }
 				]
 			: [
-					{ href: '/', label: 'Home' },
-					{ href: '/about/', label: 'About' }
+					{ href: '/', label: t.navHome },
+					{ href: '/about/', label: t.navAbout }
 				]
 	);
 
-	const shareTargets = [
+	const shareTargets = $derived([
 		{
 			id: 'email',
-			label: 'Email Link',
+			label: t.shareEmailLabel,
 			href: (url, title) => `mailto:?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(url)}`
 		},
 		{
 			id: 'linkedin',
-			label: 'Share on LinkedIn',
+			label: t.shareLinkedinLabel,
 			href: (url) => `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`
 		},
 		{
 			id: 'reddit',
-			label: 'Share on Reddit',
+			label: t.shareRedditLabel,
 			href: (url, title) =>
 				`https://www.reddit.com/submit?url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}`
 		},
 		{
 			id: 'bluesky',
-			label: 'Share on Bluesky',
+			label: t.shareBlueskyLabel,
 			href: (url, title) => `https://bsky.app/intent/compose?text=${encodeURIComponent(`${title} ${url}`)}`
 		},
 		{
 			id: 'mastodon',
-			label: 'Share on Mastodon',
+			label: t.shareMastodonLabel,
 			href: (url, title) =>
 				`https://mastodonshare.com/?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`
 		}
-	];
+	]);
 
 	const path = $derived(page.url.pathname);
 
@@ -94,7 +96,7 @@
 	<meta name="theme-color" content="#ffffff" />
 </svelte:head>
 
-<SkipLink class="skip-link" href="#main" label="Skip to content" />
+<SkipLink class="skip-link" href="#main" label={t.skipToContent} />
 
 <Header class="site-header" label="Site">
 	<div class="site-header-inner">
@@ -134,7 +136,7 @@
 
 		<PickerBar
 			class="site-controls"
-			labels={{ theme: 'Theme', locale: 'Language', textSize: 'Text size', share: 'Share' }}
+			labels={{ theme: t.pickerTheme, locale: t.pickerLanguage, textSize: t.pickerTextSize, share: t.pickerShare }}
 			themesUrl="{base}/assets/themes/"
 			themeProps={{ defaultValue: 'light', detectFromSystem: true, storageKey: 'health-economics-metrics.theme' }}
 			{locales}
@@ -149,9 +151,9 @@
 			{shareTargets}
 			shareProps={{
 				title: bookTitle,
-				copyLabel: 'Copy link',
-				copiedLabel: 'Copied',
-				copyFailedLabel: 'Copy failed',
+				copyLabel: t.shareCopyLink,
+				copiedLabel: t.shareCopied,
+				copyFailedLabel: t.shareCopyFailed,
 				children: shareIcon
 			}}
 		/>
@@ -167,21 +169,19 @@
 <Footer class="site-footer" label="Site">
 	<div class="site-footer-inner">
 		<p>
-			<strong>{bookTitle}</strong> — health economics math, examples, and reasoning for
-			software engineers building for national health services.
+			<strong>{bookTitle}</strong>{t.footerTaglineSuffix}
 		</p>
 		<p class="site-footer-note">
-			Figures in this book date quickly. Each topic dates its benchmarks in-line; re-verify
-			before using any number in a live business case.
+			{t.footerNote}
 		</p>
 		<nav class="site-footer-links" aria-label="Footer">
 			{#if locale}
-				<a href="{base}/locales/{locale}/contents/">Contents</a>
-				<a href="{base}/locales/{locale}/topics/">Topics A–Z</a>
-				<a href="{base}/locales/{locale}/search/">Search</a>
+				<a href="{base}/locales/{locale}/contents/">{t.navContents}</a>
+				<a href="{base}/locales/{locale}/topics/">{t.navTopicsAZ}</a>
+				<a href="{base}/locales/{locale}/search/">{t.navSearch}</a>
 			{/if}
-			<a href="{base}/about/">About</a>
-			<a href="https://github.com/health-economics-metrics/health-economics-metrics">Source</a>
+			<a href="{base}/about/">{t.navAbout}</a>
+			<a href="https://github.com/health-economics-metrics/health-economics-metrics">{t.footerSourceLink}</a>
 		</nav>
 	</div>
 </Footer>

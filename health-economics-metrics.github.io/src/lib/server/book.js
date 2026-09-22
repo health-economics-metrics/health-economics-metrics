@@ -218,7 +218,14 @@ export function topic(locale, slug) {
 	const localeLinks = Object.fromEntries(
 		Object.entries(peers(locale, slug)).map(([loc, s]) => [loc, `/locales/${loc}/topics/${s}/`])
 	);
-	return { slug, locale, ...rendered, ...neighbours(locale, slug), localeLinks };
+	return {
+		slug,
+		locale,
+		bookTitle: book(locale).title,
+		...rendered,
+		...neighbours(locale, slug),
+		localeLinks
+	};
 }
 
 const TOPIC_HREF = /href="\/locales\/([\w-]+)\/topics\/([^/]+)\/"/g;

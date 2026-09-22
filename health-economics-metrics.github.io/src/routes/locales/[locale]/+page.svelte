@@ -1,8 +1,11 @@
 <script>
 	import { base } from '$app/paths';
+	import { page } from '$app/state';
 	import { SectionList, SectionListItem } from '@lilydesignsystem/svelte-headless';
+	import { ui } from '$lib/i18n.js';
 
 	let { data } = $props();
+	const t = $derived(ui(page.params.locale));
 </script>
 
 <svelte:head>
@@ -18,8 +21,8 @@
 
 	{#if data.startHere.length}
 		<section class="start-here" aria-labelledby="start-here">
-			<h2 id="start-here">Start here</h2>
-			<p>The three ideas everything else builds on.</p>
+			<h2 id="start-here">{t.startHere}</h2>
+			<p>{t.startHereSubtitle}</p>
 			<SectionList class="start-list">
 				{#each data.startHere as item (item.href)}
 					<SectionListItem class="start-item">

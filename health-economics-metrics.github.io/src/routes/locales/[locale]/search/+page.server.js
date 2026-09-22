@@ -1,8 +1,8 @@
-import { index } from '$lib/server/book.js';
+import { book, index } from '$lib/server/book.js';
 
 // The whole index is embedded in this prerendered page: 76 records of title,
 // part, blurb, summary, and section headings is small enough to ship at once,
 // which keeps search working with no server and no network round trip.
 export function load({ params }) {
-	return { topics: index(params.locale) };
+	return { bookTitle: book(params.locale).title, topics: index(params.locale) };
 }

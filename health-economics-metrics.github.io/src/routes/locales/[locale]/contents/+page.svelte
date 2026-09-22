@@ -1,13 +1,16 @@
 <script>
 	import { base } from '$app/paths';
+	import { page } from '$app/state';
 	import {
 		ContentsList,
 		ContentsListItem,
 		ContentsNav,
 		SectionHeading
 	} from '@lilydesignsystem/svelte-headless';
+	import { ui } from '$lib/i18n.js';
 
 	let { data } = $props();
+	const t = $derived(ui(page.params.locale));
 
 	/** Anchor id for a part, so the sidebar and deep links can target it. */
 	function partId(title) {
@@ -19,27 +22,25 @@
 </script>
 
 <svelte:head>
-	<title>Contents — Health Economics Metrics</title>
-	<meta name="description" content="Every topic in Health Economics Metrics, in reading order." />
+	<title>{t.navContents} — {data.bookTitle}</title>
+	<meta name="description" content={t.contentsMetaDescription(data.bookTitle)} />
 </svelte:head>
 
 <div class="page page-contents">
 	<header class="page-header">
-		<h1>Contents</h1>
+		<h1>{t.navContents}</h1>
 		<p>
-			All {data.topicCount} topics in reading order, across {data.parts.length} parts. Each topic covers
-			one metric or concept: definition, why it matters, the math, a worked example, the software
-			engineering connection, pitfalls, and sources.
+			{t.contentsIntro(data.topicCount, data.parts.length)}
 		</p>
 	</header>
 
-	<ContentsNav class="contents" label="Contents">
+	<ContentsNav class="contents" label={t.navContents}>
 		{#each data.parts as part (part.title)}
 			<section class="contents-part" id={partId(part.title)}>
 				<SectionHeading
 					class="contents-part-heading"
 					heading={part.title}
-					subtitle="{part.entries.length} topics"
+					subtitle={t.topicsCountSubtitle(part.entries.length)}
 				/>
 				<ContentsList class="contents-part-list">
 					{#each part.entries as entry (entry.slug)}
