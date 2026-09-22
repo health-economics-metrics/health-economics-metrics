@@ -5,28 +5,28 @@
 
 /** Human-readable name for each locale code, in its own language where possible. */
 export const LOCALE_LABELS = {
-	'en-us': 'English (US)',
-	'en-gb': 'English (UK)',
-	'en-gb-oxendict': 'English (UK, Oxford spelling)',
-	'en-001': 'English (international)',
+	'en-us': 'English (United States)',
+	'en-gb': 'English (Great Britain)',
+	'en-gb-oxendict': 'English (Great Britain, Oxford Spelling)',
+	'en-001': 'English (World)',
 	'en-150': 'English (Europe)',
 	'es-es': 'Español (España)',
-	'es-001': 'Español (internacional)',
+	'es-001': 'Español (Mundo)',
 	'fr-fr': 'Français (France)',
-	'fr-001': 'Français (international)',
+	'fr-001': 'Français (Monde)',
 	'ru-ru': 'Русский (Россия)',
-	'ru-001': 'Русский (международный)',
+	'ru-001': 'Русский (Мир)',
 	'zh-cn': '中文（中国大陆）',
-	'zh-001': '中文（国际）',
+	'zh-001': '中文（世界）',
 	'ar-eg': 'العربية (مصر)',
-	'ar-001': 'العربية (دولي)',
+	'ar-001': 'العربية (العالم)',
 	'cy-gb': 'Cymraeg (Y Deyrnas Unedig)',
-	'cy-001': 'Cymraeg (rhyngwladol)',
-	'hi-001': 'हिन्दी (अंतरराष्ट्रीय)',
-	'bn-001': 'বাংলা (আন্তর্জাতিক)',
-	'pt-001': 'Português (internacional)',
-	'id-001': 'Bahasa Indonesia (internasional)',
-	'ur-001': 'اردو (بین الاقوامی)'
+	'cy-001': 'Cymraeg (Byd)',
+	'hi-001': 'हिन्दी (विश्व)',
+	'bn-001': 'বাংলা (বিশ্ব)',
+	'pt-001': 'Português (Mundo)',
+	'id-001': 'Bahasa Indonesia (Dunia)',
+	'ur-001': 'اردو (دنیا)'
 };
 
 export const DEFAULT_LOCALE = 'en-gb-oxendict';

@@ -20,8 +20,15 @@ const PART = /^##\s+(.+?)\s*$/;
 const ENTRY = /^-\s+\[([^\]]+)\]\(locales\/([\w-]+)\/topics\/([^/]+)\/\)\s*(?:[—–-]\s*(.*))?$/;
 const SECTION_HEADING = /^##\s+(.+?)\s*$/;
 
-function buildCanonical() {
-	const source = read('README.md') ?? '';
+/**
+ * Parse one README-shaped source (the canonical `/README.md`, or a locale's
+ * own translated `locales/<locale>/index.md`) into `{ title, parts }`. Every
+ * translated index.md mirrors the canonical one line-for-line — same `##`
+ * headings in the same order, same entries linking to the same canonical
+ * (locale, slug) pairs — only the title text, heading text, entry titles and
+ * blurbs differ, so this one parser reads either.
+ */
+function parseIndex(source) {
 	const { title, body } = splitTitle(source);
 	const parts = [];
 	let current = null;
@@ -49,6 +56,12 @@ function buildCanonical() {
 		}
 	}
 
+	return { title, parts };
+}
+
+function buildCanonical() {
+	const { title, parts } = parseIndex(read('README.md') ?? '');
+
 	// Parts that carry no topics (the closing note on benchmark freshness, say)
 	// belong on the home page as prose, not in the navigation.
 	const navParts = parts.filter((part) => part.entries.length > 0);
@@ -61,23 +74,69 @@ function canonical() {
 	return (canonicalCache ??= buildCanonical());
 }
 
+const localizedIndexCache = new Map();
+
+/**
+ * A locale's own translated `locales/<locale>/index.md`, parsed the same way
+ * as the canonical README, or `null` when that locale has no translation yet
+ * (empty/missing file) — callers fall back to canonical-locale text in that
+ * case rather than crashing or showing a blank page.
+ */
+function localizedIndex(locale) {
+	if (localizedIndexCache.has(locale)) return localizedIndexCache.get(locale);
+	const source = read(`locales/${locale}/index.md`);
+	const result = source && source.trim() ? parseIndex(source) : null;
+	localizedIndexCache.set(locale, result);
+	return result;
+}
+
+/**
+ * This locale's own README source (translated `index.md`) when it has one,
+ * else the canonical `/README.md` — used for the home page's title, intro
+ * prose and "New here?" links, which come from the whole document rather
+ * than the structured parts/entries `localizedIndex` extracts.
+ */
+export function readmeSource(locale) {
+	return read(`locales/${locale}/index.md`) || read('README.md') || '';
+}
+
+/** canonicalSlug -> this locale's own {title, blurb}, from its translated index.md. */
+function localizedEntries(locale) {
+	const localized = localizedIndex(locale);
+	const map = new Map();
+	if (!localized) return map;
+	for (const part of localized.parts) {
+		for (const entry of part.entries) map.set(entry.canonicalSlug, entry);
+	}
+	return map;
+}
+
+/** This locale's own part-heading text, in canonical order, or null if untranslated. */
+function localizedPartTitles(locale) {
+	const localized = localizedIndex(locale);
+	if (!localized) return null;
+	return localized.parts.filter((part) => part.entries.length > 0).map((part) => part.title);
+}
+
 /** Resolve one README entry (canonical locale + slug) into a locale's own page. */
-function resolveEntry(entry, locale) {
+function resolveEntry(entry, locale, translated) {
 	const localePeers = peers(entry.canonicalLocale, entry.canonicalSlug);
 	// Falls back to the canonical slug if this locale is somehow missing the
 	// topic, so a page still renders (as a 404-prone but non-crashing link)
 	// rather than the whole nav silently dropping an entry.
 	const slug = localePeers[locale] ?? entry.canonicalSlug;
 	const source = readTopic(locale, slug);
+	// The topic's own (already-translated) H1 is the primary title source —
+	// every topic is translated, so this is reliable even for a locale whose
+	// index.md isn't translated yet. `translated` (this locale's own README
+	// entry, when it has one) is consulted for blurb, which has no other
+	// source, and as a title fallback.
 	const localTitle = source ? splitTitle(source).title : '';
 	return {
 		slug,
 		href: `/locales/${locale}/topics/${slug}/`,
-		title: localTitle || entry.title,
-		// README blurbs are only written in the canonical locale's English —
-		// they are not part of the translated content, so other locales carry
-		// none rather than showing an untranslated English aside.
-		blurb: locale === entry.canonicalLocale ? entry.blurb : '',
+		title: localTitle || translated?.title || entry.title,
+		blurb: translated?.blurb || (locale === entry.canonicalLocale ? entry.blurb : ''),
 		part: entry.part,
 		// Kept so callers (e.g. the home page's "Start here" links, which quote
 		// the README's own canonical-locale slugs) can match an entry without
@@ -99,11 +158,17 @@ const bookCache = new Map();
 export function book(locale) {
 	if (bookCache.has(locale)) return bookCache.get(locale);
 
-	const { title, navParts } = canonical();
+	const { title: canonicalTitle, navParts } = canonical();
+	const byCanonicalSlug = localizedEntries(locale);
+	const partTitles = localizedPartTitles(locale);
+	const localized = localizedIndex(locale);
+	const title = localized?.title || canonicalTitle;
 
-	const parts = navParts.map((part) => ({
-		title: part.title,
-		entries: part.entries.map((entry) => resolveEntry(entry, locale))
+	const parts = navParts.map((part, i) => ({
+		title: partTitles?.[i] ?? part.title,
+		entries: part.entries.map((entry) =>
+			resolveEntry(entry, locale, byCanonicalSlug.get(entry.canonicalSlug))
+		)
 	}));
 	let order = parts.flatMap((part) => part.entries.map((entry) => ({ ...entry, part: part.title })));
 

@@ -62,6 +62,18 @@ if (localeNames.length === 0) {
 }
 
 for (const locale of localeNames) {
+	// This locale's own translated index.md (the book's per-locale README,
+	// read by book.js's readmeSource/localizedIndex) — vendored even when
+	// still an empty placeholder, so the site's fallback-to-canonical logic
+	// sees "no content" rather than a missing file.
+	const localeIndexFrom = join(localesDir, locale, 'index.md');
+	if (existsSync(localeIndexFrom)) {
+		const localeDirTo = join(contentDir, 'locales', locale);
+		await mkdir(localeDirTo, { recursive: true });
+		await cp(localeIndexFrom, join(localeDirTo, 'index.md'));
+		count += 1;
+	}
+
 	const topicsFrom = join(localesDir, locale, 'topics');
 	if (!existsSync(topicsFrom)) {
 		console.warn(`skip (missing): locales/${locale}/topics/`);
