@@ -9,10 +9,15 @@
 
 	let { data, children } = $props();
 
-	// The 404.html fallback is rendered without layout data, so this falls back
-	// to something sensible rather than throwing on a page that exists to be
-	// shown when something has already gone wrong.
-	const bookTitle = $derived(data?.bookTitle ?? 'Health Economics Metrics');
+	// page.data is the merged data across the whole layout hierarchy, so on a
+	// locale-scoped route this picks up that locale's own bookTitle (set by
+	// locales/[locale]/+layout.server.js, overriding this root layout's own
+	// canonical-locale one) instead of always showing the English title in
+	// the header/footer. The 404.html fallback is rendered without layout
+	// data at all, so this falls back to something sensible rather than
+	// throwing on a page that exists to be shown when something has already
+	// gone wrong.
+	const bookTitle = $derived(page.data?.bookTitle ?? data?.bookTitle ?? 'Health Economics Metrics');
 	const locales = $derived(data?.locales ?? []);
 	const locale = $derived(page.params.locale);
 	const t = $derived(ui(locale ?? DEFAULT_LOCALE));
