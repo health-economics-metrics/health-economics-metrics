@@ -292,6 +292,22 @@ pre {
 	color: var(--lily-text);
 }
 
+/* The theme renders this as a normal in-flow paragraph (`margin-block-start`
+ * only), which is empty until a copy succeeds or fails. An empty <p> still
+ * takes up a line box, so `.share-picker` was taller than its sibling
+ * pickers (a bare button each) and `.site-controls`' `align-items: center`
+ * centred the *box*, leaving the share button sitting higher than the
+ * theme/locale/text-size buttons beside it. Taking the status out of flow
+ * — like the picker lists already are — makes `.share-picker` exactly
+ * button-height again, without display:none-ing the live region. */
+.share-picker-status {
+	position: absolute;
+	top: 100%;
+	inset-inline-end: 0;
+	margin: 0.35rem 0 0;
+	white-space: nowrap;
+}
+
 /* --- Page frame ---------------------------------------------------------- */
 
 /* One column. Navigation lives in the header, the contents page, and the
