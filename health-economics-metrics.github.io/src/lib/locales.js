@@ -7,7 +7,7 @@
 export const LOCALE_LABELS = {
 	'en-us': 'English - United States',
 	'en-gb': 'English - Great Britain',
-	'en-gb-oxendict': 'English - Great Britain, Oxford Spelling',
+	'en-gb-oxendict': 'English - Great Britain - Oxford',
 	'en-001': 'English',
 	'en-150': 'English - Europe',
 	'es-es': 'Español - España',

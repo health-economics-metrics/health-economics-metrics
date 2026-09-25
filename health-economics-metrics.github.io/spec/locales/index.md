@@ -83,17 +83,18 @@ Override with `BOOK=/path/to/book`.
 ## Locale picker (labels + ordering)
 
 - Labels live in `locales.js`'s `LOCALE_LABELS`, one entry per code, in that
-  language (e.g. `'fr-001': 'Français (Monde)'`). Falls back to the raw code
+  language, as `"<language>"` for a `-001` world variant or `"<language> -
+  <region>"` otherwise (e.g. `'fr-001': 'Français'`, `'fr-fr': 'Français -
+  France'`) — see the top-level `spec/locales-for-global-sharing-with-svelte/
+  locales.tsv` for the full endonym/exonym table. Falls back to the raw code
   via `localeLabel()` if a code has no label yet.
 - Header `PickerBar` order comes from `content.js`'s `locales()` (sorted by
   code) — the `-001` suffix happens to sort before any letter-starting
   regional suffix, so World variants already come first there.
 - Home page's locale list (`+page.server.js`) sorts explicitly: default
-  locale first, then grouped by language name (label text before the `(`),
+  locale first, then grouped by language name (label text before `" - "`),
   with the `-001`/World variant sorted before its regional siblings within
-  each group, then alphabetically by label. This does NOT fall out of
-  alphabetical-by-label sort on its own (e.g. "España" < "Mundo") — it needs
-  the explicit `-001` check.
+  each group, then alphabetically by label.
 
 ## Bug fixes (regression watch-list)
 
@@ -143,14 +144,31 @@ start, not regressions from a working state.
    picker and `/about/` (no locale in the URL) correctly keep the canonical
    English title.
 
+6. **The five English dialect variants' home pages showed American spelling
+   regardless of dialect**, because `locales/{en-us,en-gb,en-gb-oxendict,
+   en-150,en-001}/index.md` were still the empty scaffold placeholder, so
+   `readmeSource()` fell back to the canonical (American-spelled) root
+   `README.md` for all of them — visible as "math"/"organizations" on
+   `en-gb`'s home page even though its own topic pages already said
+   "maths"/"organisations". Fixed by populating each with the same content,
+   spelling-adjusted per the `Guidance` rules in
+   `spec/locales-for-global-sharing-with-svelte/index.md` (`en-150` and
+   `en-001` follow `en-gb`, confirmed against their already-dialect-correct
+   topic files).
+
+7. **`+page.server.js`'s language-grouping regex silently broke when
+   `LOCALE_LABELS` moved from `"<language> (<region>)"` to `"<language> -
+   <region>"`.** It stripped everything from `(` onward to find the
+   "language" part of a label to group by; once no label contained `(`
+   anymore, every regional variant grouped as its own one-item "language"
+   instead of joining its `-001` sibling. Fixed by stripping from `" - "`
+   instead, matching the new label format.
+
 ## Known remaining gaps
 
 - Theme-name and text-size option labels (e.g. "Largest", "Dracula") come
   from the third-party `@lilydesignsystem/svelte-picker-bar` component's own
   internal labels, not this site's code — not localized.
-- Only 17 of 22 locales have a translated `locales/<code>/index.md` and
-  `i18n.js` entry (the five English variants use the English fallback by
-  design — same language, so nothing to translate).
 - A locale can be content-complete (topics) but chrome-incomplete (no
   `i18n.js`/`index.md` entry) or vice versa; both fall back to English
   per-field, independently, so this degrades gracefully rather than
