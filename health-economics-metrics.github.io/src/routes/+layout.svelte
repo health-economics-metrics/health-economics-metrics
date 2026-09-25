@@ -22,6 +22,13 @@
 	const locale = $derived(page.params.locale);
 	const t = $derived(ui(locale ?? DEFAULT_LOCALE));
 
+	// The header picker offers locales to switch TO, so the one already
+	// showing is noise, not a choice — omit it rather than list it
+	// alongside an aria-selected marker nothing in this compact dropdown
+	// surfaces anyway. Outside a locale (the root picker, /about/) there's
+	// no current locale to omit.
+	const pickerLocales = $derived(locale ? locales.filter((code) => code !== locale) : locales);
+
 	// Contents/Topics/Search only make sense once a locale is chosen; outside
 	// a locale (the root picker, /about/) the nav only offers Home and About.
 	const topLinks = $derived(
@@ -144,7 +151,7 @@
 			labels={{ theme: t.pickerTheme, locale: t.pickerLanguage, textSize: t.pickerTextSize, share: t.pickerShare }}
 			themesUrl="{base}/assets/themes/"
 			themeProps={{ defaultValue: 'light', detectFromSystem: true, storageKey: 'health-economics-metrics.theme' }}
-			{locales}
+			locales={pickerLocales}
 			localeProps={{
 				value: locale ?? '',
 				defaultValue: DEFAULT_LOCALE,
