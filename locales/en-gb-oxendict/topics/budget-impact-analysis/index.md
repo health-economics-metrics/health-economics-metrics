@@ -35,7 +35,7 @@ Even if the product's ICER is a stellar £8,000/QALY, the payer must find £3.24
 
 ## Software engineering connection
 
-BIA is exactly the CFO-facing complement to a per-seat ROI claim: "it's cost-effective per developer, but can we afford org-wide rollout this fiscal year?" Model licence tiers, an adoption S-curve, displaced tooling spend that only cash-releases when old contracts actually terminate, and induced usage (cheaper CI → more CI). Presenting a 3-year budget-impact table alongside the ROI is what makes an enterprise tooling proposal finance-credible.
+BIA is exactly the CFO-facing complement to a per-seat ROI claim: "it's cost-effective per developer, but can we afford org-wide rollout this fiscal year?" Model licence tiers, an adoption S-curve, displaced tooling spend that only cash-releases when old contracts actually terminate, and induced usage (cheaper CI → more CI). Presenting a 3-year budget-impact table alongside the ROI is what makes an enterprise tooling proposal finance-credible. Splitting a published budget-impact total across sites, cohorts, or financial years — and having the parts reconcile exactly to the published figure — is precisely [exact-cents cost allocation](../exact-cents-cost-allocation/); summing the many line items that feed the total in the first place is [currency-safe cost rollup](../currency-safe-cost-rollup/).
 
 ## Pitfalls
 

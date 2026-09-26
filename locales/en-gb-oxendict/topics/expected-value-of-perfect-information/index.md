@@ -46,7 +46,7 @@ EVPI is the economics of the spike, the pilot, the A/B test, and the proof-of-co
 - **A pilot is only worth funding if the decision could actually change.** If you'd roll out regardless of the pilot result, EVPI = 0 and the pilot is theatre.
 - **Cap pilot spend at EVPI.** The value of information is bounded by the value of the decision it informs.
 
-Partial EVPI (EVPPI) extends this to single parameters: "what is it worth to nail down the time-saved number specifically?" — which tells you what the pilot should measure.
+Partial EVPI (EVPPI) extends this to single parameters: "what is it worth to nail down the time-saved number specifically?" — which tells you what the pilot should measure. For pricing a *specific* proposed study rather than eliminating all uncertainty, see [EVSI](../expected-value-of-sample-information/).
 
 ## Pitfalls
 

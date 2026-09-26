@@ -41,6 +41,7 @@ Engineering capacity is a fixed budget too — roadmap slots, not pounds. A plat
 - **Comparing against nothing.** The correct comparator is the next-best use of the money, which is rarely "do nothing."
 - **Assuming saved time has zero opportunity cost.** Time saved is only valuable if redeployed to something valuable — see [cash-releasing vs non-cash-releasing savings](../cash-releasing-vs-non-cash-releasing/).
 - **Ignoring displacement.** "The budget will expand to fit" is almost never true in a national health service in-year.
+- **Ignoring which method values a displaced resource.** For lost productivity specifically — from illness, disability, or a departing employee — see [human capital approach vs friction cost method](../human-capital-and-friction-cost/), the productivity-cost-specific version of this idea.
 
 ## Sources
 

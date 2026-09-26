@@ -51,6 +51,8 @@ Every engineering org has an implicit λ: the hurdle at which it funds tooling p
 - **Threshold shopping** across jurisdictions or citing the HST ceiling for an ordinary product.
 - **Treating λ as a price floor**: clearing the threshold is necessary, not sufficient — [budget impact](../budget-impact-analysis/) can still sink an affordable-per-unit product.
 - **Ignoring that thresholds move**: NICE's severity modifiers (2022) and periodic reviews change effective λ; date your claims.
+- **Comparing an ICER against a threshold in a different currency without converting first**: see [cross-currency ICER comparison](../cross-currency-icer-comparison/) — the conversion method (purchasing power parity vs market exchange rate) is methodologically consequential, not a rounding detail.
+- **Conflating λ-based valuation with the labour-market VSL/VPF tradition**: these come from different theoretical traditions (health-budget-constrained methodology vs revealed preference from wage-risk trade-offs) and are not always reconcilable — for the alternative revealed-preference approach to valuing life, see [Value of a Statistical Life](../value-of-a-statistical-life/).
 
 ## Sources
 

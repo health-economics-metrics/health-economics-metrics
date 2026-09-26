@@ -40,7 +40,7 @@ The responder/NNT framing survives review where the sub-MCID mean difference wou
 
 ## Software engineering connection
 
-PROMs are a data-collection problem software is uniquely placed to solve: in-app instruments get completion rates and longitudinal density paper never achieved, turning routine product telemetry into HTA-grade evidence ([EQ-5D](../eq-5d/) is five screens). Engineering rules: use the validated instrument *verbatim* (rewording invalidates it — licensing applies); schedule measurement by protocol, not engagement convenience (measuring only active users is survivorship bias — see [retention](../retention-and-churn/)); and version-lock instrument data like any schema — a mid-study wording change is data corruption. PREMs map to CSAT/NPS-style instruments, and the same lesson applies: standardized beats homegrown wherever the audience is a payer.
+PROMs are a data-collection problem software is uniquely placed to solve: in-app instruments get completion rates and longitudinal density paper never achieved, turning routine product telemetry into HTA-grade evidence ([EQ-5D](../eq-5d/) is five screens). Engineering rules: use the validated instrument *verbatim* (rewording invalidates it — licensing applies); schedule measurement by protocol, not engagement convenience (measuring only active users is survivorship bias — see [retention](../retention-and-churn/)); and version-lock instrument data like any schema — a mid-study wording change is data corruption. PREMs map to CSAT/NPS-style instruments, and the same lesson applies: standardized beats homegrown wherever the audience is a payer. For a work-productivity-specific instrument, see [WPAI](../work-productivity-and-activity-impairment/).
 
 ## Pitfalls
 
