@@ -4,7 +4,7 @@ RE-AIM — Reach, Effectiveness, Adoption, Implementation, Maintenance — is th
 
 ## Why it matters
 
-Systematic reviews applying RE-AIM to mHealth find a consistent signature: strong Reach and Adoption, **weak Effectiveness and Maintenance** — apps spread easily and fade fast. For a national health service, this means an impressive per-user product can be a poor population investment, and vice versa: a modestly effective tool reaching millions can outproduce a brilliant one reaching thousands (see the [HALE](../health-adjusted-life-expectancy/) arithmetic). Equity is not a side constraint but a value driver: digital exclusion tracks age, deprivation, disability, and language — exactly the populations carrying the most treatable burden — so the marginal excluded user often has *above-average* potential benefit.
+Systematic reviews applying RE-AIM to mHealth find a consistent signature: strong Reach and Adoption, **weak Effectiveness and Maintenance** — apps spread easily and fade fast. For a national health service, this means an impressive per-user product can be a poor population investment, and vice versa: a modestly effective tool reaching millions can outproduce a brilliant one reaching thousands (see the [HALE](../health-adjusted-life-expectancy/) arithmetic). Equity is not a side constraint but a value driver: digital exclusion tracks age, deprivation, disability, and language — exactly the populations carrying the most treatable burden — so the marginal excluded user often has *above-average* potential benefit. For a formal statistical measure of socioeconomic-related health inequality, see [Concentration Index](../concentration-index/).
 
 ## The maths
 

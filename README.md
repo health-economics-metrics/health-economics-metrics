@@ -16,6 +16,7 @@ New here? Start with [opportunity cost](locales/en-gb-oxendict/topics/opportunit
 - [Probabilistic sensitivity analysis](locales/en-gb-oxendict/topics/probabilistic-sensitivity-analysis/) — Monte Carlo, CEACs, probability of being right
 - [Expected value of perfect information](locales/en-gb-oxendict/topics/expected-value-of-perfect-information/) — pricing the pilot before you run it
 - [Expected value of sample information](locales/en-gb-oxendict/topics/expected-value-of-sample-information/) — pricing a *specific* proposed study, not eliminating all uncertainty
+- [Real options valuation](locales/en-gb-oxendict/topics/real-options-valuation/) — pricing the option to expand a phased project later, rather than the option to gather information first
 - [Human capital approach vs friction cost method](locales/en-gb-oxendict/topics/human-capital-and-friction-cost/) — two ways to value lost productivity, a 2x+ difference in reported cost
 - [Dominance and the efficiency frontier](locales/en-gb-oxendict/topics/dominance-and-efficiency-frontier/) — eliminating options nobody should pick
 
@@ -67,11 +68,14 @@ New here? Start with [opportunity cost](locales/en-gb-oxendict/topics/opportunit
 ## HTA frameworks and prevention economics
 
 - [Health technology assessment (HTA)](locales/en-gb-oxendict/topics/health-technology-assessment/) — NICE, ICER (US), CADTH: who decides what's worth buying
+- [Markov cohort simulation](locales/en-gb-oxendict/topics/markov-cohort-simulation/) — how a multi-cycle HTA model is actually simulated cohort-by-cycle
 - [NICE Evidence Standards Framework](locales/en-gb-oxendict/topics/nice-evidence-standards-framework/) — risk-tiered evidence requirements for digital health
 - [Germany's DiGA fast-track](locales/en-gb-oxendict/topics/diga-fast-track/) — apps on prescription; provisional listing with an evidence deadline
 - [Number needed to treat (NNT)](locales/en-gb-oxendict/topics/number-needed-to-treat/) — effort-per-benefit units that keep claims honest
+- [Population attributable fraction (PAF)](locales/en-gb-oxendict/topics/population-attributable-fraction/) — how much disease burden a risk factor is really worth chasing
 - [Prevention economics](locales/en-gb-oxendict/topics/prevention-economics/) — why prevention is cost-effective but rarely cost-saving
 - [Screening economics](locales/en-gb-oxendict/topics/screening-economics/) — Wilson–Jungner, PPV collapse at low prevalence, alert fatigue
+- [Number needed to screen (NNS)](locales/en-gb-oxendict/topics/number-needed-to-screen/) — NNT's screening-programme-level analogue
 - [Avoided downstream costs](locales/en-gb-oxendict/topics/avoided-downstream-costs/) — cost offsets and the rules that make them credible
 - [Multi-criteria decision analysis (MCDA)](locales/en-gb-oxendict/topics/multi-criteria-decision-analysis/) — weighted scoring when a single threshold isn't enough
 - [Carbon footprint per QALY](locales/en-gb-oxendict/topics/carbon-footprint-per-qaly/) — the NHS net-zero commitment meets cost-per-QALY
@@ -113,6 +117,7 @@ New here? Start with [opportunity cost](locales/en-gb-oxendict/topics/opportunit
 - [Remote patient monitoring economics](locales/en-gb-oxendict/topics/remote-patient-monitoring-economics/) — CPT code stacks and hospital-at-home substitution
 - [Health app unit economics](locales/en-gb-oxendict/topics/health-app-unit-economics/) — CAC, LTV, PMPM, and ROI vs VOI
 - [Reach and equity](locales/en-gb-oxendict/topics/reach-and-equity/) — RE-AIM; population impact = reach × effectiveness
+- [Concentration index](locales/en-gb-oxendict/topics/concentration-index/) — a formal statistical measure of socioeconomic-related health inequality
 
 ## Benchmark freshness
 

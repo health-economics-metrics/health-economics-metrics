@@ -34,6 +34,8 @@ The sponsor's own preferred analysis showed £9,000/QALY; the reference case pus
 
 The transferable artifact is the **internal reference case**: one mandated method for all tooling/platform business cases — declared comparator, standard unit costs (see [national tariff and unit costs](../national-tariff-and-unit-costs/) for the pattern), fixed discount rate, required sensitivity analysis, standard template. An "AMCP-dossier for tools" submitted to a platform council makes proposals comparable and gaming visible, exactly as HTA does for medicine. Start smaller than NICE did: a two-page template plus a published price book beats no standard at all.
 
+For how a multi-cycle HTA model is actually simulated cohort-by-cycle, see [Markov cohort simulation](../markov-cohort-simulation/).
+
 ## Pitfalls
 
 - **Treating HTA as a formality after regulatory clearance** — CE/UKCA/FDA clearance says a product is safe; HTA decides if it's *worth buying*. Different hurdle, different evidence.

@@ -4,7 +4,7 @@ EVPI is the maximum amount a decision-maker should pay to eliminate uncertainty 
 
 ## Why it matters
 
-Health systems constantly face the choice: adopt now on imperfect evidence, or fund more research first. EVPI puts a number on the second option. If EVPI is £50,000 and the proposed trial costs £2 million, adopt now. If EVPI is £20 million, the trial is a bargain. The same question — "should we pilot this before rolling it out?" — arises for every enterprise tool decision, and almost nobody prices it.
+Health systems constantly face the choice: adopt now on imperfect evidence, or fund more research first. EVPI puts a number on the second option. If EVPI is £50,000 and the proposed trial costs £2 million, adopt now. If EVPI is £20 million, the trial is a bargain. The same question — "should we pilot this before rolling it out?" — arises for every enterprise tool decision, and almost nobody prices it. For pricing the option to expand a project later, rather than the option to gather information first, see [Real Options Valuation](../real-options-valuation/).
 
 ## The maths
 

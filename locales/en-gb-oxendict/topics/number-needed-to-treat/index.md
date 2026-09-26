@@ -37,7 +37,7 @@ Note how NNT keeps the claim honest: "reduces falls 25%" and "prevent one fall p
 
 ## Software engineering connection
 
-NNT is the right unit for any gate or check that acts on many items to catch few: **"number of PRs that must pass through the AI review gate to catch one production-bound defect."** If the gate reviews 400 PRs per real catch (NNT = 400) at 4 minutes of developer attention each, one catch costs ~27 developer-hours — now compare that to the incident cost it prevents. NNH maps to false positives: how many PRs per *false* flag, and what does each cost in attention and trust? Screening-style tooling (linters, security scanners, anomaly detection) should ship with NNT/NNH arithmetic — see [screening economics](../screening-economics/) for why low prevalence makes these numbers brutal.
+NNT is the right unit for any gate or check that acts on many items to catch few: **"number of PRs that must pass through the AI review gate to catch one production-bound defect."** If the gate reviews 400 PRs per real catch (NNT = 400) at 4 minutes of developer attention each, one catch costs ~27 developer-hours — now compare that to the incident cost it prevents. NNH maps to false positives: how many PRs per *false* flag, and what does each cost in attention and trust? Screening-style tooling (linters, security scanners, anomaly detection) should ship with NNT/NNH arithmetic — see [screening economics](../screening-economics/) for why low prevalence makes these numbers brutal. [Number needed to screen](../number-needed-to-screen/) is the analogous figure one level up, for a whole screen-then-treat programme rather than a treatment alone.
 
 ## Pitfalls
 
