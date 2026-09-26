@@ -67,7 +67,7 @@ const EN = {
 const es = {
 	skipToContent: 'Saltar al contenido',
 	navHome: 'Inicio',
-	navContents: 'Índice',
+	navContents: 'Contenido',
 	navTopicsAZ: 'Temas A–Z',
 	navSearch: 'Buscar',
 	navAbout: 'Acerca de',
@@ -96,7 +96,7 @@ const es = {
 	topicsCountSubtitle: (n) => `${n} temas`,
 	topicsMetaDescription: (bookTitle) => `Todos los temas de ${bookTitle}, en orden alfabético.`,
 	topicsIntroPrefix: (count) => `Los ${count} temas en orden alfabético. Para el orden de lectura, consulta el`,
-	contentsLinkText: 'índice',
+	contentsLinkText: 'contenido',
 	jumpToLetter: 'Ir a la letra',
 	searchMetaDescription: (bookTitle) => `Busca en todos los temas de ${bookTitle}.`,
 	searchIntro: (count) =>
