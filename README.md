@@ -24,6 +24,7 @@ New here? Start with [opportunity cost](locales/en-gb-oxendict/topics/opportunit
 - [Quality-adjusted life year (QALY)](locales/en-gb-oxendict/topics/quality-adjusted-life-year/) — the common currency of health value
 - [Disability-adjusted life year (DALY)](locales/en-gb-oxendict/topics/disability-adjusted-life-year/) — the burden-side mirror; global health's metric
 - [EQ-5D](locales/en-gb-oxendict/topics/eq-5d/) — the instrument behind most QALY utility weights
+- [Time Trade-Off (TTO) Utility Elicitation](locales/en-gb-oxendict/topics/time-trade-off-utility/) — how a utility weight is actually elicited from a respondent
 - [Incremental cost-effectiveness ratio (ICER)](locales/en-gb-oxendict/topics/incremental-cost-effectiveness-ratio/) — extra cost per extra unit of health
 - [Willingness-to-pay thresholds](locales/en-gb-oxendict/topics/willingness-to-pay-thresholds/) — NICE £20–30k/QALY and the world's other lines
 - [Value of a statistical life (VSL)](locales/en-gb-oxendict/topics/value-of-a-statistical-life/) — the labour-market alternative to threshold-based valuation

@@ -45,6 +45,7 @@ Against a control-group change of 0.03 (natural recovery), the attributable gain
 - **Survivorship bias**: measuring only users who stayed engaged (see [retention and churn](../retention-and-churn/)).
 - **Mixing 3L and 5L versions or value sets** across studies — systematically different numbers.
 - **Ceiling effects** in mildly affected populations: many users score near 1.0 at baseline, leaving no headroom to demonstrate gain.
+- **Treating a value set as self-justifying**: the utility numbers a value set returns were themselves elicited from the public via time-trade-off (or a related choice-based) surveys — see [Time Trade-Off (TTO) Utility Elicitation](../time-trade-off-utility/) for how.
 
 ## Sources
 
