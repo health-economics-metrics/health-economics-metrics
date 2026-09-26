@@ -1,0 +1,76 @@
+name: Deploy to GitHub Pages
+
+# The site lives in health-economics-metrics.github.io/ inside this
+# monorepo (see "Fold health-economics-metrics.github.io into this repo
+# as a monorepo"). This repo is itself named <org>.github.io — see
+# health-economics-metrics.github.io/spec/locales/index.md for why that's
+# the only way to serve https://health-economics-metrics.github.io/ from
+# here — so pushes to its main branch are what deploys the live site.
+# GitHub Actions only discovers workflows under a repo's OWN top-level
+# .github/workflows/, never a subdirectory's, so this file has to live
+# here rather than inside health-economics-metrics.github.io/.github/.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# One deploy at a time; let a running one finish rather than cancelling it.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+defaults:
+  run:
+    working-directory: health-economics-metrics.github.io
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          package_json_file: health-economics-metrics.github.io/package.json
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          cache: pnpm
+          cache-dependency-path: health-economics-metrics.github.io/pnpm-lock.yaml
+
+      # The book's Markdown is vendored into content/ ahead of time (`pnpm
+      # run sync:content`, run and committed by a maintainer) rather than
+      # here in CI: this repo's own locales/ currently has content ahead of
+      # content/'s last vendor snapshot with a broken cross-locale link
+      # (ar-001's EQ-5D topic links to a "time-trade-off-utility" translation
+      # that doesn't exist yet), which would fail every build if synced live.
+      - run: pnpm install --frozen-lockfile
+
+      # https://svelte.dev/docs/kit/adapter-static#GitHub-Pages
+      # BASE_PATH is deliberately left unset. The docs set it to the repository
+      # name, which is right for a project site served from
+      # /<repo>/ — but this repository is named <org>.github.io and is served
+      # from the domain root, so the base path must stay empty.
+      - run: pnpm run build
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: health-economics-metrics.github.io/build
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
