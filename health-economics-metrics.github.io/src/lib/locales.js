@@ -45,7 +45,7 @@ export const LOCALE_LABELS = {
 	'zh-tw': '中文 - 台灣',
 	'ar-eg': 'العربية - مصر',
 	'ar-001': 'العربية',
-	'cy-gb': 'Cymraeg - Y Deyrnas Unedig',
+	'cy-gb': 'Cymraeg - Prydain Fawr',
 	'cy-001': 'Cymraeg',
 	'hi-001': 'हिन्दी',
 	'hi-in': 'हिन्दी - भारत',
