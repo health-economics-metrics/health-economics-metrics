@@ -1,0 +1,17 @@
+Say hello and tell us how you use Health Economics Metrics
+
+Welcome to the Health Economics Metrics Discussions. This is the place for introductions, opinions, and open conversation about the book.
+
+I am a maintainer of the project. I wrote Health Economics Metrics because I wanted an introduction to health economics math, examples, and reasoning, where each topic covers one metric or concept with a definition, the math, a worked example, pitfalls, and sources to be easy to find and use. I would like to hear who is reading it and why.
+
+**One question to start:** Which health economics metric or concept would you like to see explained with a worked example?
+
+A sentence or two is plenty. Replies to other people are welcome too.
+
+## Where other topics belong
+
+- Questions with answers: Q&A
+- Suggestions for new or changed topics: Ideas
+- Errors or broken links: Issues (https://github.com/health-economics-metrics/health-economics-metrics/issues)
+
+Thank you for reading. I will reply to the first comments.

@@ -1,0 +1,25 @@
+How to suggest an idea for Health Economics Metrics
+
+Have an idea for Health Economics Metrics? This is the place to propose a new topic, a change to an existing one, or a better way to explain something. One idea per discussion keeps feedback easy to follow.
+
+## How to suggest an idea
+
+Copy this template into a new discussion in Ideas:
+
+**Title:** the outcome or the problem, not the solution. For example, "Explain a metric or concept such as opportunity cost, quality-adjusted life years, or cost of delay".
+
+**Problem:** What is missing, wrong, or hard to understand? Who is affected, and when?
+
+**Proposal:** What would you add or change? A short list is fine.
+
+**Alternatives:** What do readers do today? Is doing nothing acceptable?
+
+**Costs and trade-offs:** Could this make the book longer, harder to maintain, or less focused?
+
+**Open questions:** What would you like feedback on?
+
+## What happens next
+
+Maintainers read new ideas and reply in the discussion. An idea is not promised a place in the book. If an idea is agreed, it may become an issue (https://github.com/health-economics-metrics/health-economics-metrics/issues) so the work can be tracked.
+
+Errors and typos belong in Issues, and questions belong in Q&A.
