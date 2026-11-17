@@ -23,6 +23,7 @@ fi-001	Suomi	Finnish
 fi-fi	Suomi - Suomi	Finnish - Finland
 fr-001	Français	French
 fr-fr	Français - France	French - France
+fr-ca	Français - Canada	French - Canada
 hi-001	हिन्दी	Hindi
 hi-in	हिन्दी - भारत	Hindi - India
 id-001	Bahasa Indonesia	Indonesian
@@ -43,6 +44,7 @@ pl-001	Polski	Polish
 pl-pl	Polski - Polska	Polish - Poland
 pt-001	Português	Portuguese
 pt-pt	Português - Portugal	Portuguese - Portugal
+pt-br	Português - Brasil	Portuguese - Brazil
 ru-001	Русский	Russian
 ru-ru	Русский - Россия	Russian - Russia
 sv-001	Svenska	Swedish
