@@ -14,7 +14,7 @@
 
 1. Create `locales/<locale>/` (home page `index.md`, `README.md` symlink, `.locale-peer-id`, and the topics directory), by copying a sibling or translating. English locales call the topics directory `topics`; every other locale translates its name into its own language and script (`temas`, `sujets`, `topik`, `主题`, `विषय`, `トピック`, `주제`, `المواضيع`, `বিষয়সমূহ`, `pynciau`). The directory carries the same `.locale-peer-id` as the English one, `bin/test` finds it as the subdirectory whose children carry a `.locale-peer-id`, and `pnpm sync:content` vendors it back under the fixed name `topics/` so the site's routes stay locale-agnostic.
 2. Add a row to `spec/locales-for-global-sharing-with-svelte/locales.tsv`.
-3. In the site: `src/lib/i18n.js` (translations map), `src/lib/locales.js` (label), `spec/locales/index.md` (list and count).
+3. In the site: `src/lib/i18n.js` (translations map), `src/lib/locales.js` (label), `spec/locales-for-global-sharing-with-svelte/index.md` (locale list).
 4. `pnpm sync:content`, then `pnpm build`.
 
 Use separate commits: the locale content, the site registration, the spec row.
