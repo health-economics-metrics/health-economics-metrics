@@ -93,6 +93,10 @@ export const HERO = {
   "tagline": "Mathématiques, exemples et raisonnement de l'économie de la santé.",
   "translations": "Traductions: "
  },
+ "fr-ca": {
+  "tagline": "Mathématiques, exemples et raisonnement de l'économie de la santé.",
+  "translations": "Traductions: "
+ },
  "fr-fr": {
   "tagline": "Mathématiques, exemples et raisonnement de l'économie de la santé.",
   "translations": "Traductions: "
@@ -171,6 +175,10 @@ export const HERO = {
  },
  "pt-001": {
   "tagline": "Matemática, exemplos e raciocínio de economia da saúde.",
+  "translations": "Traduções: "
+ },
+ "pt-br": {
+  "tagline": "Matemática, exemplos e raciocínio da economia da saúde.",
   "translations": "Traduções: "
  },
  "pt-pt": {
@@ -280,6 +288,7 @@ export const ENDONYMS = {
  "fi-001": "Suomi",
  "fi-fi": "Suomi (Suomi)",
  "fr-001": "Français",
+ "fr-ca": "Français (Canada)",
  "fr-fr": "Français (France)",
  "hi-001": "हिन्दी",
  "hi-in": "हिन्दी (भारत)",
@@ -300,6 +309,7 @@ export const ENDONYMS = {
  "pl-001": "Polski",
  "pl-pl": "Polski (Polska)",
  "pt-001": "Português",
+ "pt-br": "Português (Brasil)",
  "pt-pt": "Português (Portugal)",
  "ru-001": "Русский",
  "ru-ru": "Русский (Россия)",
