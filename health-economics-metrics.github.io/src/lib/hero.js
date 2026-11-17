@@ -65,6 +65,10 @@ export const HERO = {
   "tagline": "Matemáticas, ejemplos y razonamiento de economía de la salud.",
   "translations": "Traducciones: "
  },
+ "es-mx": {
+  "tagline": "Matemáticas, ejemplos y razonamiento de economía de la salud.",
+  "translations": "Traducciones: "
+ },
  "es-es": {
   "tagline": "Matemáticas, ejemplos y razonamiento de economía de la salud.",
   "translations": "Traducciones: "
@@ -270,6 +274,7 @@ export const ENDONYMS = {
  "en-us": "English (United States)",
  "es-001": "Español",
  "es-es": "Español (España)",
+ "es-mx": "Español (México)",
  "et-001": "Eesti",
  "et-et": "Eesti (Eesti)",
  "fi-001": "Suomi",

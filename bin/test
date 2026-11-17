@@ -30,6 +30,7 @@ test_locales() {
         hi-001 \
         ar-001 \
         es-001 \
+        es-mx \
         fr-001 \
         ru-001 \
         bn-001 \

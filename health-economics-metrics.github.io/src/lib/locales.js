@@ -30,6 +30,7 @@ export const LOCALE_LABELS = {
 	'pl-pl': 'Polski - Polska',
 	'es-es': 'Español - España',
 	'es-001': 'Español',
+	'es-mx': 'Español - México',
 	'fr-fr': 'Français - France',
 	'fr-001': 'Français',
 	'ru-ru': 'Русский - Россия',
