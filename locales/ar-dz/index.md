@@ -1,0 +1,131 @@
+# مقاييس اقتصاديات الصحة
+
+مقدمة شاملة لرياضيات وأمثلة ومنطق اقتصاديات الصحة. يغطي كل ملف مقياساً أو مفهوماً واحداً: التعريف، لماذا هو مهم، الرياضيات، مثال محلول، العلاقة بهندسة البرمجيات، الأخطاء الشائعة، والمصادر.
+
+هل أنت جديد هنا؟ ابدأ بـ [تكلفة الفرصة البديلة](locales/en-gb-oxendict/topics/opportunity-cost/)، و[سنة الحياة المعدَّلة بالجودة](locales/en-gb-oxendict/topics/quality-adjusted-life-year/)، و[تكلفة التأخير](locales/en-gb-oxendict/topics/cost-of-delay/) — الأفكار الثلاث التي يُبنى عليها كل شيء آخر.
+
+## أسس التفكير الاقتصادي
+
+- [تكلفة الفرصة البديلة](locales/en-gb-oxendict/topics/opportunity-cost/) — قيمة أفضل بديل تم التخلي عنه؛ لماذا تجعل الميزانيات الثابتة كل اختيار عملية إحلال
+- [الخصم وتفضيل الوقت](locales/en-gb-oxendict/topics/discounting-and-time-preference/) — القيم الحالية، معدل 3.5% من Green Book/NICE
+- [منظور التحليل](locales/en-gb-oxendict/topics/analysis-perspective/) — الجهة الدافعة مقابل مقدّم الخدمة مقابل المجتمع: تكاليف مَن التي تُحسب
+- [الأفق الزمني](locales/en-gb-oxendict/topics/time-horizon/) — المدة الزمنية لاحتساب التكاليف والآثار، والتلاعب بالأفق الزمني
+- [التكلفة الحدّية مقابل المتوسطة](locales/en-gb-oxendict/topics/marginal-vs-average-cost/) — لماذا لا يوفّر إخلاء سرير تكلفته المتوسطة
+- [التوفير المحرِّر للنقد مقابل غير المحرِّر له](locales/en-gb-oxendict/topics/cash-releasing-vs-non-cash-releasing/) — اختبار الصدق لكل ادعاء بـ"توفير الوقت"
+- [تحليل الحساسية](locales/en-gb-oxendict/topics/sensitivity-analysis/) — مخططات الإعصار؛ أي افتراض يحمل حجتك
+- [تحليل الحساسية الاحتمالي (PSA)](locales/en-gb-oxendict/topics/probabilistic-sensitivity-analysis/) — مونت كارلو، منحنيات CEAC، احتمال أن تكون على صواب
+- [القيمة المتوقعة للمعلومات الكاملة (EVPI)](locales/en-gb-oxendict/topics/expected-value-of-perfect-information/) — تسعير التجربة الاستطلاعية قبل تشغيلها
+- [القيمة المتوقعة لمعلومات العيّنة (EVSI)](locales/en-gb-oxendict/topics/expected-value-of-sample-information/) — تقييم *دراسة مقترحة محددة*، لا إزالة كل عدم اليقين
+- [تقييم الخيارات الحقيقية](locales/en-gb-oxendict/topics/real-options-valuation/) — تسعير خيار توسيع المشروع المرحلي لاحقًا، لا خيار جمع المعلومات أولًا
+- [نهج رأس المال البشري مقابل طريقة تكلفة الاحتكاك](locales/en-gb-oxendict/topics/human-capital-and-friction-cost/) — طريقتان لتقدير الإنتاجية المفقودة، والتكلفة المبلَّغ عنها تختلف بمقدار الضعف أو أكثر
+- [الهيمنة وحدود الكفاءة](locales/en-gb-oxendict/topics/dominance-and-efficiency-frontier/) — استبعاد الخيارات التي لا ينبغي لأحد اختيارها
+
+## مقاييس النتائج
+
+- [سنة الحياة المُعدَّلة بالجودة (QALY)](locales/en-gb-oxendict/topics/quality-adjusted-life-year/) — العملة المشتركة لقيمة الصحة
+- [سنة الحياة المُعدَّلة بالعجز (DALY)](locales/en-gb-oxendict/topics/disability-adjusted-life-year/) — المرآة من جانب العبء؛ مقياس الصحة العالمية
+- [EQ-5D](locales/en-gb-oxendict/topics/eq-5d/) — الأداة التي تقوم عليها معظم أوزان منفعة QALY
+- [استخلاص المنفعة بأسلوب المبادلة الزمنية (TTO)](locales/en-gb-oxendict/topics/time-trade-off-utility/) — كيف يُستخلص وزن المنفعة فعليًا من المستجيب
+- [نسبة فعالية التكلفة التزايدية (ICER)](locales/en-gb-oxendict/topics/incremental-cost-effectiveness-ratio/) — التكلفة الإضافية لكل وحدة إضافية من الصحة
+- [عتبات الاستعداد للدفع](locales/en-gb-oxendict/topics/willingness-to-pay-thresholds/) — حدود NICE من 20 إلى 30 ألف جنيه إسترليني لكل QALY، والخطوط الأخرى حول العالم
+- [قيمة الحياة الإحصائية (VSL)](locales/en-gb-oxendict/topics/value-of-a-statistical-life/) — البديل القائم على سوق العمل للتقييم بالعتبات
+- [صافي المنفعة النقدية (NMB)](locales/en-gb-oxendict/topics/net-monetary-benefit/) — القيمة ناقص التكلفة، محسوبة بشكل صحيح
+- [سنوات الحياة المكتسَبة (LYG)](locales/en-gb-oxendict/topics/life-years-gained/) — رياضيات البقاء، ومتغير الإنصاف evLYG
+- [متوسط العمر المتوقَّع المُعدَّل بالصحة (HALE)](locales/en-gb-oxendict/topics/health-adjusted-life-expectancy/) — احتساب السنوات الصحية على مستوى السكان
+- [نقص QALY ومعدّلات الشدّة](locales/en-gb-oxendict/topics/qaly-shortfall-and-severity-modifiers/) — لماذا تُحتسب سنوات QALY للفئات الأكثر مرضاً بوزن أكبر
+- [إنتاجية العمل واعتلال النشاط (WPAI)](locales/en-gb-oxendict/topics/work-productivity-and-activity-impairment/) — الغياب مقابل الحضور مع تدنٍّ في الأداء، النصف الخفي من التكلفة
+
+## أنواع التحليل الاقتصادي
+
+- [تحليل فعالية التكلفة (CEA)](locales/en-gb-oxendict/topics/cost-effectiveness-analysis/) — التكلفة لكل وحدة طبيعية من النتيجة
+- [تحليل التكلفة والمنفعة العامة (CUA)](locales/en-gb-oxendict/topics/cost-utility-analysis/) — التكلفة لكل QALY؛ مقارنة تدخلات غير متماثلة
+- [تحليل التكلفة والمنفعة (CBA)](locales/en-gb-oxendict/topics/cost-benefit-analysis/) — كل شيء بالمال؛ صافي القيمة الحالية وفق Green Book
+- [تحليل تقليل التكلفة (CMA)](locales/en-gb-oxendict/topics/cost-minimization-analysis/) — الخيار الأرخص، بعد إثبات التكافؤ
+- [تحليل التكلفة والنتائج (CCA)](locales/en-gb-oxendict/topics/cost-consequence-analysis/) — الجدول المفصّل؛ تفضيل NICE للصحة الرقمية
+- [تحليل أثر الميزانية (BIA)](locales/en-gb-oxendict/topics/budget-impact-analysis/) — القدرة على تحمّل التكلفة، بخلاف القيمة
+- [العائد على الاستثمار (ROI)](locales/en-gb-oxendict/topics/return-on-investment/) — المقياس المشترك، بمعايير مُعلَنة
+- [العائد الاجتماعي على الاستثمار (SROI)](locales/en-gb-oxendict/topics/social-return-on-investment/) — تحويل ما لا تُسعّره الأسواق إلى قيمة نقدية
+- [مقارنة ICER عبر العملات](locales/en-gb-oxendict/topics/cross-currency-icer-comparison/) — PPP مقابل سعر الصرف السوقي؛ خيار التحويل الذي قد يقلب قرار الاعتماد
+
+## الاقتصاديات التشغيلية لنظام الصحة
+
+- [أيام الأسرّة المُوفَّرة](locales/en-gb-oxendict/topics/bed-days-saved/) — الفائدة الأساسية، وفخاخ تقييمها
+- [مدة الإقامة (LOS)](locales/en-gb-oxendict/topics/length-of-stay/) — زمن دورة المستشفى
+- [معدل إعادة الدخول](locales/en-gb-oxendict/topics/readmission-rate/) — معدل فشل التغيير في نظام الصحة
+- [معدل عدم الحضور (DNA)](locales/en-gb-oxendict/topics/did-not-attend-rate/) — المواعيد الفائتة؛ أنقى مقياس للهدر
+- [تجنّب حضور الطوارئ](locales/en-gb-oxendict/topics/emergency-attendance-avoidance/) — اقتصاديات التدخل في المراحل الأولى
+- [التعريفة الوطنية وتكاليف الوحدة](locales/en-gb-oxendict/topics/national-tariff-and-unit-costs/) — دليل أسعار NHS وبنية احتساب التكاليف
+- [الإحالة إلى العلاج (RTT)](locales/en-gb-oxendict/topics/referral-to-treatment/) — معيار الثمانية عشر أسبوعاً كمقياس لوقت الانتظار
+- [أثر قائمة الانتظار](locales/en-gb-oxendict/topics/waiting-list-impact/) — تحويل الساعات الموفَّرة إلى مرضى تم استقبالهم
+- [وقت الممارس](locales/en-gb-oxendict/topics/practitioner-time/) — تقييم سعة نقطة الاختناق، لا الأجور
+- [الاحتفاظ بالقوى العاملة](locales/en-gb-oxendict/topics/workforce-retention/) — تكاليف دوران الموظفين واقتصاديات الاحتراق الوظيفي
+- [تكاليف الاستعانة بمصادر خارجية القابلة للتجنّب](locales/en-gb-oxendict/topics/avoidable-outsourcing-costs/) — إعادة العمل ذي التكلفة المرتفعة إلى الداخل
+- [تحسين الموارد المصبّية](locales/en-gb-oxendict/topics/downstream-resource-optimization/) — فك عنق الزجاجة عند الدور الذي ينتظره الجميع
+- [التدخل الأسبق](locales/en-gb-oxendict/topics/earlier-intervention/) — اقتصاديات العلاج قبل تفاقم الحالة
+- [القدرة المُولِّدة للقيمة (التحوّل التشغيلي)](locales/en-gb-oxendict/topics/value-generating-capacity-operational-turnaround/) — سكّ سعة إضافية دون توظيف
+- [التوفير الصارم المحرِّر للنقد (دفاع العجز)](locales/en-gb-oxendict/topics/hard-cash-releasing-savings-deficit-defence/) — حذف بنود الميزانية؛ مقياس المدير المالي
+
+## أطر تقييم التكنولوجيا الصحية واقتصاديات الوقاية
+
+- [تقييم التقنية الصحية (HTA)](locales/en-gb-oxendict/topics/health-technology-assessment/) — NICE وICER (الولايات المتحدة) وCADTH: من يقرر ما يستحق الشراء
+- [محاكاة أتراب ماركوف](locales/en-gb-oxendict/topics/markov-cohort-simulation/) — كيف يُحاكى نموذج HTA متعدد الدورات فعليًا، ترب بعد ترب، ودورة بعد دورة
+- [إطار معايير الأدلة لـNICE (ESF)](locales/en-gb-oxendict/topics/nice-evidence-standards-framework/) — متطلبات أدلة متدرجة حسب المخاطر للصحة الرقمية
+- [المسار السريع لـDiGA الألماني](locales/en-gb-oxendict/topics/diga-fast-track/) — تطبيقات بوصفة طبية؛ إدراج مؤقت بموعد نهائي لتقديم الأدلة
+- [العدد اللازم للعلاج (NNT)](locales/en-gb-oxendict/topics/number-needed-to-treat/) — وحدات الجهد لكل فائدة تُبقي الادعاءات صادقة
+- [الكسر المنسوب إلى السكان (PAF)](locales/en-gb-oxendict/topics/population-attributable-fraction/) — إلى أي مدى يستحق عامل خطر أن يُحارَب من حيث عبء المرض
+- [اقتصاد الرعاية الوقائية](locales/en-gb-oxendict/topics/prevention-economics/) — لماذا الوقاية فعّالة من حيث التكلفة لكنها نادراً ما توفر المال
+- [اقتصاد الفحص](locales/en-gb-oxendict/topics/screening-economics/) — معايير ويلسون–يونغنر، وانهيار القيمة التنبؤية الإيجابية عند انخفاض الانتشار، وإرهاق التنبيهات
+- [العدد اللازم فحصه (NNS)](locales/en-gb-oxendict/topics/number-needed-to-screen/) — نظير NNT على مستوى برنامج الفحص
+- [التكاليف المصبّية المُتجنَّبة](locales/en-gb-oxendict/topics/avoided-downstream-costs/) — تعويضات التكلفة والقواعد التي تجعلها موثوقة
+- [تحليل القرار متعدد المعايير (MCDA)](locales/en-gb-oxendict/topics/multi-criteria-decision-analysis/) — تسجيل نقاط موزون حين لا تكفي عتبة واحدة
+- [البصمة الكربونية لكل QALY](locales/en-gb-oxendict/topics/carbon-footprint-per-qaly/) — التزام NHS بصافي الصفر يلتقي بالتكلفة لكل QALY
+
+## هندسة البرمجيات والتسليم الرقمي
+
+- [تكلفة التأخير (CoD)](locales/en-gb-oxendict/topics/cost-of-delay/) — جنيه إسترليني/أسبوع أو QALY/أسبوع من عدم التسليم؛ المقياس الجسري الرئيسي
+- [مقاييس DORA](locales/en-gb-oxendict/topics/dora-metrics/) — أداء التسليم، مُترجم إلى مصطلحات اقتصاديات الصحة
+- [مقاييس التدفق](locales/en-gb-oxendict/topics/flow-metrics/) — قانون ليتل، العمل قيد التنفيذ، كفاءة التدفق؛ رياضيات الطوابير المشتركة بين المستشفيات وخطوط الإنتاج البرمجية
+- [WSJF وCD3](locales/en-gb-oxendict/topics/wsjf-and-cd3/) — ترتيب الأولويات حسب كثافة القيمة؛ قائمة العمل المتراكم كجدول تصنيف QALY
+- [SPACE وDevEx](locales/en-gb-oxendict/topics/space-and-devex/) — الإنتاجية متعددة الأبعاد؛ درس EQ-5D لمقاييس الهندسة
+- [الدين التقني](locales/en-gb-oxendict/topics/technical-debt/) — أصل الدين، الفائدة، واقتصاديات الأمراض المزمنة لقواعد الشيفرة
+- [التكلفة الإجمالية للملكية (TCO)](locales/en-gb-oxendict/topics/total-cost-of-ownership/) — الصيانة تمثل 50–80%؛ خطأ تسعير الدواء الساذج، مُطبَّقاً على البرمجيات
+- [اقتصاد وحدة السحابة (FinOps)](locales/en-gb-oxendict/topics/cloud-unit-economics/) — التكلفة لكل وحدة إنتاج؛ التكلفة المرجعية للخدمة الرقمية
+- [التخصيص الدقيق للتكاليف إلى السنت](locales/en-gb-oxendict/topics/exact-cents-cost-allocation/) — تخصيص أكبر باقٍ؛ تقسيم إجمالي بحيث تجمع الحصص إليه تمامًا
+- [تجميع التكاليف الآمن للعملات](locales/en-gb-oxendict/topics/currency-safe-cost-rollup/) — `Money` عشري دقيق، لا `f64`، للإجماليات التي يجب أن تتطابق إلى آخر سنت
+- [البناء مقابل الشراء](locales/en-gb-oxendict/topics/build-vs-buy/) — مقارنة معدّلة حسب المخاطر مع تسعير عامل التأخير
+- [تحقيق الفوائد](locales/en-gb-oxendict/topics/benefits-realization/) — التدقيق للتأكد من أن الفوائد المتوقعة تحققت فعلاً
+- [مقاييس خدمة GDS](locales/en-gb-oxendict/topics/gds-service-metrics/) — التكلفة لكل معاملة، الرضا، الإتمام، معدل الإقبال
+
+## تسريع الذكاء الاصطناعي
+
+- [إنتاجية المطوّرين بالذكاء الاصطناعي](locales/en-gb-oxendict/topics/ai-developer-productivity/) — تجربة Copilot العشوائية المحكومة مقابل تجربة METR؛ الفعالية النظرية مقابل الفعالية الواقعية
+- [العائد على استثمار الذكاء الاصطناعي](locales/en-gb-oxendict/topics/ai-return-on-investment/) — نتيجة أن 95% بلا عائد، وما الذي فعلته نسبة الـ5% بشكل مختلف
+- [اقتصاد وحدة الاستدلال](locales/en-gb-oxendict/topics/inference-unit-economics/) — التكلفة لكل رمز (token)، ونمذجة الانخفاض المستمر في الأسعار
+- [مقاييس جودة الذكاء الاصطناعي](locales/en-gb-oxendict/topics/ai-quality-metrics/) — معدلات الهلوسة بوصفها معدلات ضرر ذات تكلفة
+- [التقييم السريري للذكاء الاصطناعي](locales/en-gb-oxendict/topics/clinical-ai-evaluation/) — الحساسية، النوعية، AUROC، ولماذا يحكم معدل الانتشار الاقتصاديات
+- [التقييم التنظيمي للذكاء الاصطناعي](locales/en-gb-oxendict/topics/ai-regulatory-evaluation/) — تصنيف SaMD لدى FDA، وخطط PCCP، واقتصاديات تحديثات النماذج
+
+## تطبيقات وأجهزة الصحة الاستهلاكية
+
+- [مقاييس المشاركة](locales/en-gb-oxendict/topics/engagement-metrics/) — التفاعل كجرعة علاجية
+- [الاحتفاظ والمغادرة](locales/en-gb-oxendict/topics/retention-and-churn/) — قانون التناقص؛ منحنيات الاحتفاظ كنوافذ علاجية
+- [التفعيل والتبني](locales/en-gb-oxendict/topics/activation-and-uptake/) — البوابات الأمامية لقمع القيمة
+- [الالتزام والاستمرارية](locales/en-gb-oxendict/topics/adherence-and-persistence/) — MPR، PDC، التفاعل الفعّال، الجرعة الفعالة الدنيا
+- [النتائج المُبلَّغ عنها من المرضى (PROMs، PREMs، MCID)](locales/en-gb-oxendict/topics/patient-reported-outcomes/) — PROM وPREM وحد الصدق MCID
+- [نقاط النهاية والمؤشرات الحيوية الرقمية](locales/en-gb-oxendict/topics/digital-endpoints-and-biomarkers/) — من قياسات المستشعرات عن بُعد إلى أدلة بمستوى تنظيمي
+- [مصادقة الأجهزة القابلة للارتداء](locales/en-gb-oxendict/topics/wearable-validation/) — MAPE، إحصاءات التوافق، مدة الارتداء، الاكتمال
+- [اقتصاد المراقبة عن بُعد للمرضى](locales/en-gb-oxendict/topics/remote-patient-monitoring-economics/) — حزم رموز CPT والاستبدال بالاستشفاء المنزلي
+- [اقتصاد وحدة تطبيق الصحة](locales/en-gb-oxendict/topics/health-app-unit-economics/) — CAC وLTV وPMPM وROI مقابل VOI
+- [الوصول والإنصاف](locales/en-gb-oxendict/topics/reach-and-equity/) — RE-AIM؛ الأثر السكاني = الوصول × الفعالية
+- [مؤشر التركّز](locales/en-gb-oxendict/topics/concentration-index/) — المقياس الإحصائي الرسمي لعدم المساواة الصحية الاجتماعية الاقتصادية
+
+## حداثة الأرقام المرجعية
+
+يتم تحديث كثير من الأرقام المذكورة سنوياً (تكاليف الوحدة في NHS، أسعار مخطط الدفع، مجموعات DORA، أعداد DiGA، أسعار نماذج اللغة الكبيرة). يؤرّخ كل مستند أرقامه المرجعية داخل النص نفسه؛ تحقق منها مجدداً قبل استخدامها في حالة عمل حقيقية.
+
+## مهارات Claude
+
+يوفر هذا المستودع مهارتين من [مهارات Claude](https://code.claude.com/docs/en/skills) — ضع أياً منهما في مجلد `.claude/skills/` الخاص بمشروعك (أو وجّه Claude إلى مجلد `skills/` في هذا المستودع) لتشغيل هذا الكتاب مباشرة داخل جلسة برمجة عبر وكيل ذكاء اصطناعي:
+
+- [health-economics-metrics-skill](https://github.com/health-economics-metrics/health-economics-metrics/blob/main/skills/health-economics-metrics-skill/SKILL.md) — للاستخدام العام: شرح مفهوم، أو حساب مقياس من أرقامك الخاصة، أو بناء حالة عمل بمقاييس متعددة، استناداً إلى معادلات هذا الكتاب وأمثلته المحلولة وأخطائه الشائعة بدلاً من الاستدعاء العام.
+- [health-economics-metrics-maintainer-skill](https://github.com/health-economics-metrics/health-economics-metrics/blob/main/skills/health-economics-metrics-maintainer-skill/SKILL.md) — للقائمين على صيانة هذا المستودع: قالب كل موضوع، وقواعد فهرسة README، وقائمة تحقق من الروابط والمزامنة عند إضافة المواضيع أو تعديلها.

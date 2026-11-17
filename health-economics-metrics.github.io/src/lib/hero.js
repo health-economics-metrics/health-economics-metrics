@@ -9,11 +9,19 @@ export const HERO = {
   "tagline": "رياضيات اقتصاديات الصحة وأمثلتها ومنطقها.",
   "translations": "الترجمات: "
  },
+ "ar-dz": {
+  "tagline": "رياضيات اقتصاديات الصحة وأمثلتها ومنطقها.",
+  "translations": "الترجمات: "
+ },
  "bn-001": {
   "tagline": "স্বাস্থ্য অর্থনীতির গণিত, উদাহরণ ও যুক্তি।",
   "translations": "অনুবাদ: "
  },
  "bn-bd": {
+  "tagline": "স্বাস্থ্য অর্থনীতির গণিত, উদাহরণ ও যুক্তি।",
+  "translations": "অনুবাদ: "
+ },
+ "bn-in": {
   "tagline": "স্বাস্থ্য অর্থনীতির গণিত, উদাহরণ ও যুক্তি।",
   "translations": "অনুবাদ: "
  },
@@ -117,6 +125,10 @@ export const HERO = {
   "tagline": "Matematika ekonomi kesehatan, contoh, dan penalaran.",
   "translations": "Terjemahan: "
  },
+ "id-my": {
+  "tagline": "Matematika ekonomi kesehatan, contoh, dan penalaran.",
+  "translations": "Terjemahan: "
+ },
  "is-001": {
   "tagline": "Stærðfræði heilsuhagfræði, dæmi og rökstuðningur.",
   "translations": "Þýðingar: "
@@ -190,6 +202,10 @@ export const HERO = {
   "translations": "Переводы: "
  },
  "ru-ru": {
+  "tagline": "Математика экономики здравоохранения, примеры и рассуждения.",
+  "translations": "Переводы: "
+ },
+ "ru-by": {
   "tagline": "Математика экономики здравоохранения, примеры и рассуждения.",
   "translations": "Переводы: "
  },
@@ -267,8 +283,10 @@ export const HERO = {
 export const ENDONYMS = {
  "ar-001": "العربية",
  "ar-eg": "العربية (مصر)",
+ "ar-dz": "العربية - الجزائر",
  "bn-001": "বাংলা",
  "bn-bd": "বাংলা (বাংলাদেশ)",
+ "bn-in": "বাংলা - ভারত",
  "cy-001": "Cymraeg",
  "cy-gb": "Cymraeg (Prydain Fawr)",
  "da-001": "Dansk",
@@ -294,6 +312,7 @@ export const ENDONYMS = {
  "hi-in": "हिन्दी (भारत)",
  "id-001": "Bahasa Indonesia",
  "id-id": "Bahasa Indonesia (Indonesia)",
+ "id-my": "Bahasa Indonesia - Malaysia",
  "is-001": "Íslenska",
  "is-is": "Íslenska (Ísland)",
  "it-001": "Italiano",
@@ -313,6 +332,7 @@ export const ENDONYMS = {
  "pt-pt": "Português (Portugal)",
  "ru-001": "Русский",
  "ru-ru": "Русский (Россия)",
+ "ru-by": "Русский - Беларусь",
  "sv-001": "Svenska",
  "sv-se": "Svenska (Sverige)",
  "sw-001": "Kiswahili",
