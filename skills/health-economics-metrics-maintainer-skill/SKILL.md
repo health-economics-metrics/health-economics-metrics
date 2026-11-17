@@ -6,9 +6,8 @@ description: Maintain this repository — add or edit a topic file under locales
 # Maintaining health-economics-metrics
 
 This repo's reference docs live under `locales/<locale>/topics/<slug>/`, one directory per topic,
-for each of 11 locales: `en-us`, `en-gb`, `en-gb-oxendict` (the canonical/default locale that
-`README.md` and the skills link into), `en-001`, `en-150`, and six full-language translations —
-`es-es`, `fr-fr`, `ru-ru`, `zh-cn`, `ar-eg`, `cy-gb`. Every topic directory contains:
+for each of the 69 locales under `locales/`; `en-gb-oxendict` is the canonical/default locale
+that `README.md` and the skills link into. Every topic directory contains:
 
 - `index.md` — the actual content (what used to be a flat `topics/<slug>.md` file)
 - `README.md` — a real symlink to `index.md` (`ln -s index.md README.md`), so the directory
@@ -20,7 +19,7 @@ for each of 11 locales: `en-us`, `en-gb`, `en-gb-oxendict` (the canonical/defaul
   locale's version of an existing topic, and never let two different topics share one.
 
 There is no build step, no CI — consistency is entirely convention-based, so following the
-existing pattern precisely (across all 11 locales, not just one) is the whole job.
+existing pattern precisely (across all locales, not just one) is the whole job.
 
 ## Slugs can differ by locale
 
@@ -115,7 +114,7 @@ is translated, never the directory name.
 - Preserve section headings and order even for a small fix — don't reorganize a file you're
   only correcting a number in.
 - If you edit `locales/en-gb-oxendict/topics/<slug>/index.md` (the canonical English content),
-  the other 10 locales now disagree with it until someone updates them too — say so rather than
+  the other locales now disagree with it until someone updates them too — say so rather than
   leaving it silently unsynced; you don't have to translate immediately, but flag the drift.
 - If you change a topic's slug (directory name), grep the whole repo for the old slug (topics
   link to each other via `../<slug>/`) and for the old title text in `README.md` before
@@ -145,7 +144,7 @@ for loc in locales/*/topics; do
   done
 done
 
-# Every topic directory has matching .locale-peer-id counts across locales (76 == 76 == ...):
+# Every topic directory has matching .locale-peer-id counts across locales (91 == 91 == ...):
 for loc in locales/*/topics; do
   echo "$loc: $(find "$loc" -name .locale-peer-id | wc -l)"
 done

@@ -18,7 +18,7 @@ willingness-to-pay thresholds, terminology) and known pitfalls that generic know
    business case / argument?
 2. **Find the topic(s).** Scan `README.md` — it's a categorized index with a one-line hook per
    topic — to identify the most relevant file(s) in `locales/en-gb-oxendict/topics/` (the default
-   locale; the same 76 topics also exist translated under `locales/<other-locale>/topics/`). Read
+   locale; the same 91 topics also exist translated under `locales/<other-locale>/topics/`). Read
    the full file(s), not just the README hook line.
 3. **Follow cross-links.** Topic files link to related topics inline via `../<slug>/` (e.g.
    cost-of-delay/index.md links to ../wsjf-and-cd3/ and ../discounting-and-time-preference/). A
