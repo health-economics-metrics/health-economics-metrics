@@ -33,6 +33,10 @@ export const HERO = {
   "tagline": "Mathemateg economeg iechyd, enghreifftiau a rhesymu.",
   "translations": "Cyfieithiadau: "
  },
+ "cy-ar": {
+  "tagline": "Mathemateg economeg iechyd, enghreifftiau a rhesymu.",
+  "translations": "Cyfieithiadau: "
+ },
  "da-001": {
   "tagline": "Sundhedsøkonomisk matematik, eksempler og ræsonnement.",
   "translations": "Oversættelser: "
@@ -46,6 +50,10 @@ export const HERO = {
   "translations": "Übersetzungen: "
  },
  "de-de": {
+  "tagline": "Mathematik, Beispiele und Argumentation der Gesundheitsökonomie.",
+  "translations": "Übersetzungen: "
+ },
+ "de-at": {
   "tagline": "Mathematik, Beispiele und Argumentation der Gesundheitsökonomie.",
   "translations": "Übersetzungen: "
  },
@@ -114,6 +122,10 @@ export const HERO = {
   "translations": "अनुवाद: "
  },
  "hi-in": {
+  "tagline": "स्वास्थ्य अर्थशास्त्र का गणित, उदाहरण और तर्क।",
+  "translations": "अनुवाद: "
+ },
+ "hi-np": {
   "tagline": "स्वास्थ्य अर्थशास्त्र का गणित, उदाहरण और तर्क।",
   "translations": "अनुवाद: "
  },
@@ -273,6 +285,10 @@ export const HERO = {
   "tagline": "卫生经济学数学、案例与推理。",
   "translations": "翻译： "
  },
+ "zh-th": {
+  "tagline": "卫生经济学数学、案例与推理。",
+  "translations": "翻译： "
+ },
  "zh-tw": {
   "tagline": "衛生經濟學數學、案例與推理。",
   "translations": "翻譯： "
@@ -289,10 +305,12 @@ export const ENDONYMS = {
  "bn-in": "বাংলা - ভারত",
  "cy-001": "Cymraeg",
  "cy-gb": "Cymraeg (Prydain Fawr)",
+ "cy-ar": "Cymraeg (Ariannin)",
  "da-001": "Dansk",
  "da-dk": "Dansk (Danmark)",
  "de-001": "Deutsch",
  "de-de": "Deutsch (Deutschland)",
+ "de-at": "Deutsch (Österreich)",
  "en-001": "English",
  "en-150": "English (Europe)",
  "en-gb": "English (Great Britain)",
@@ -310,6 +328,7 @@ export const ENDONYMS = {
  "fr-fr": "Français (France)",
  "hi-001": "हिन्दी",
  "hi-in": "हिन्दी (भारत)",
+ "hi-np": "हिन्दी (नेपाल)",
  "id-001": "Bahasa Indonesia",
  "id-id": "Bahasa Indonesia (Indonesia)",
  "id-my": "Bahasa Indonesia - Malaysia",
@@ -349,5 +368,6 @@ export const ENDONYMS = {
  "vi-vn": "Tiếng Việt (Việt Nam)",
  "zh-001": "中文",
  "zh-cn": "简体中文",
+ "zh-th": "简体中文 (泰国)",
  "zh-tw": "繁體中文"
 };
