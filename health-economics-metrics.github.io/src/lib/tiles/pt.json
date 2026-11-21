@@ -1,0 +1,32 @@
+[
+ {
+  "title": "Ver o que cada escolha realmente custa",
+  "text": "Entenda por que gastar numa coisa é abrir mão de outra e explique suas escolhas com clareza a qualquer pessoa.",
+  "link": "Ler sobre custo de oportunidade"
+ },
+ {
+  "title": "Medir a saúde de um jeito que todos entendem",
+  "text": "Conheça o ano de vida ajustado pela qualidade, uma medida única de quanto e como as pessoas vivem.",
+  "link": "Ler sobre o QALY"
+ },
+ {
+  "title": "Descobrir o que você ganha pelo seu dinheiro",
+  "text": "Compare o custo extra de um tratamento com a saúde extra que ele traz e distinga bom valor de esperança cara.",
+  "link": "Ler sobre custo-efetividade"
+ },
+ {
+  "title": "Separar economia real de economia imaginada",
+  "text": "Verifique se o tempo poupado vira dinheiro que pode ser gasto em outro lugar antes de prometer uma economia.",
+  "link": "Ler sobre economias reais"
+ },
+ {
+  "title": "Ver se você pode pagar por isso",
+  "text": "Calcule o efeito de um novo serviço no seu orçamento nos próximos anos, separado de saber se vale a pena.",
+  "link": "Ler sobre impacto orçamentário"
+ },
+ {
+  "title": "Saber quanto confiar nos seus números",
+  "text": "Descubra quais premissas mais pesam, para mostrar sua confiança e onde olhar com mais cuidado.",
+  "link": "Ler sobre análise de sensibilidade"
+ }
+]

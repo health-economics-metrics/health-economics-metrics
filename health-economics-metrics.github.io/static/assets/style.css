@@ -1150,3 +1150,37 @@ pre {
 		vertical-align: baseline;
 	}
 }
+
+/* Locale landing page: six tile cards under the hero. */
+.page-tiles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: var(--lily-space-lg);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.page-tile {
+    display: flex;
+    flex-direction: column;
+    padding: var(--lily-space-lg);
+    border: 1px solid var(--lily-border-strong);
+    border-radius: var(--lily-radius-md);
+}
+
+.page-tile h2 {
+    margin: 0 0 var(--lily-space-sm);
+    font-size: 1.2em;
+    line-height: 1.25;
+    text-wrap: balance;
+}
+
+.page-tile p {
+    margin: 0 0 var(--lily-space-md);
+}
+
+.page-tile .page-tile-link {
+    margin: auto 0 0;
+    font-weight: 600;
+}

@@ -1,0 +1,32 @@
+[
+ {
+  "title": "See what every choice really costs",
+  "text": "Learn why spending on one thing means giving up another, so you can explain your choices clearly to anyone.",
+  "link": "Read about opportunity cost"
+ },
+ {
+  "title": "Measure health in a way everyone understands",
+  "text": "Understand the quality-adjusted life year, a single measure that combines how long and how well people live.",
+  "link": "Read about the QALY"
+ },
+ {
+  "title": "Find out what you get for your money",
+  "text": "Compare the extra cost of a treatment with the extra health it brings, so you can tell good value from expensive hope.",
+  "link": "Read about cost-effectiveness"
+ },
+ {
+  "title": "Tell real savings from wishful ones",
+  "text": "Check whether time saved turns into money you can actually spend elsewhere, before you promise a saving.",
+  "link": "Read about real savings"
+ },
+ {
+  "title": "See whether you can afford it",
+  "text": "Work out what a new service will do to your budget over the next few years, separately from whether it is good value.",
+  "link": "Read about budget impact"
+ },
+ {
+  "title": "Know how much to trust your numbers",
+  "text": "Find which assumptions matter most, so you can show how confident you are and where to look harder.",
+  "link": "Read about sensitivity analysis"
+ }
+]

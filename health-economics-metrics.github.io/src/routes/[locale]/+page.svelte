@@ -5,9 +5,11 @@
 	import PartsList from '#lib/PartsList.svelte';
 	import { ui } from '#lib/i18n.js';
 	import { HERO } from '#lib/hero.js';
+	import { tilesFor } from '#lib/tiles.js';
 
 	let { data } = $props();
 	const t = $derived(ui(page.params.locale));
+	const tiles = $derived(tilesFor(page.params.locale));
 	const subheadline = $derived(HERO[page.params.locale]?.tagline ?? HERO['en-001'].tagline);
 </script>
 
@@ -27,6 +29,16 @@
 				>{/each}
 		</p>
 	</header>
+
+	<ul class="page-tiles">
+		{#each tiles as tile, i (i)}
+			<li class="page-tile">
+				<h2>{tile.title}</h2>
+				<p>{tile.text}</p>
+				<p class="page-tile-link"><a href={resolve(data.tileHrefs[i].slice(1))}>{tile.link}</a></p>
+			</li>
+		{/each}
+	</ul>
 
 	{#if data.startHere.length}
 		<section class="start-here" aria-labelledby="start-here">

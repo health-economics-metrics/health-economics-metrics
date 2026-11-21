@@ -1,0 +1,32 @@
+[
+ {
+  "title": "Näe, mitä jokainen valinta oikeasti maksaa",
+  "text": "Ymmärrä, miksi yhteen käytetty raha on pois toiselta, ja perustele valintasi selkeästi kenelle tahansa.",
+  "link": "Lue vaihtoehtoiskustannuksesta"
+ },
+ {
+  "title": "Mittaa terveyttä kaikkien ymmärtämällä tavalla",
+  "text": "Tutustu laatupainotettuun elinvuoteen, yhteen mittariin siitä, kuinka pitkään ja kuinka hyvin ihmiset elävät.",
+  "link": "Lue QALYsta"
+ },
+ {
+  "title": "Selvitä, mitä rahoillasi saa",
+  "text": "Vertaa hoidon lisäkustannusta saatuun lisäterveyteen ja erota hyvä vastine kalliista toivosta.",
+  "link": "Lue kustannusvaikuttavuudesta"
+ },
+ {
+  "title": "Erota todelliset säästöt toiveajattelusta",
+  "text": "Tarkista, muuttuuko säästetty aika rahaksi, jonka voi käyttää muualle, ennen kuin lupaat säästön.",
+  "link": "Lue todellisista säästöistä"
+ },
+ {
+  "title": "Näe, onko sinulla varaa",
+  "text": "Laske, mitä uusi palvelu tekee budjetillesi lähivuosina, erillään siitä, onko se sen arvoinen.",
+  "link": "Lue budjettivaikutuksesta"
+ },
+ {
+  "title": "Tiedä, kuinka paljon lukuihisi voi luottaa",
+  "text": "Selvitä, mitkä oletukset painavat eniten, jotta voit näyttää varmuutesi ja tietää, mihin katsoa tarkemmin.",
+  "link": "Lue herkkyysanalyysistä"
+ }
+]

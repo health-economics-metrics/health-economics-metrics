@@ -1,0 +1,32 @@
+[
+ {
+  "title": "Ver lo que cuesta realmente cada decisión",
+  "text": "Entienda por qué gastar en algo significa renunciar a otra cosa y explique sus decisiones con claridad a cualquiera.",
+  "link": "Leer sobre el costo de oportunidad"
+ },
+ {
+  "title": "Medir la salud de forma que todos entiendan",
+  "text": "Conozca el año de vida ajustado por calidad, una medida única de cuánto y cómo viven las personas.",
+  "link": "Leer sobre el AVAC"
+ },
+ {
+  "title": "Saber qué obtiene por su dinero",
+  "text": "Compare el costo adicional de un tratamiento con la salud adicional que aporta y distinga el buen valor de la esperanza cara.",
+  "link": "Leer sobre costo-efectividad"
+ },
+ {
+  "title": "Distinguir los ahorros reales de los deseados",
+  "text": "Compruebe si el tiempo ahorrado se convierte en dinero que pueda gastar en otro lado antes de prometer un ahorro.",
+  "link": "Leer sobre ahorros reales"
+ },
+ {
+  "title": "Ver si puede permitírselo",
+  "text": "Calcule qué efecto tendrá un nuevo servicio en su presupuesto en los próximos años, aparte de si vale la pena.",
+  "link": "Leer sobre impacto presupuestario"
+ },
+ {
+  "title": "Saber cuánto confiar en sus cifras",
+  "text": "Descubra qué supuestos pesan más para mostrar su grado de confianza y dónde mirar con más atención.",
+  "link": "Leer sobre análisis de sensibilidad"
+ }
+]

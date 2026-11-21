@@ -1,0 +1,32 @@
+[
+ {
+  "title": "Vaadake, mida iga valik tegelikult maksab",
+  "text": "Mõistke, miks raha kulutamine ühele asjale tähendab teisest loobumist, ja selgitage oma valikuid kõigile selgelt.",
+  "link": "Loe alternatiivkulust"
+ },
+ {
+  "title": "Mõõtke tervist kõigile arusaadavalt",
+  "text": "Tutvuge kvaliteediga kohandatud eluaastaga, mis on üks mõõt selle kohta, kui kaua ja kui hästi inimesed elavad.",
+  "link": "Loe QALYst"
+ },
+ {
+  "title": "Uurige, mida teie raha eest saab",
+  "text": "Võrrelge ravi lisakulu lisatud tervisega ja eristage hea väärtus kallist lootusest.",
+  "link": "Loe kulutõhususest"
+ },
+ {
+  "title": "Eristage tegelikku kokkuhoidu soovmõtlemisest",
+  "text": "Kontrollige, kas säästetud aeg muutub rahaks, mida saab mujal kulutada, enne kui kokkuhoidu lubate.",
+  "link": "Loe tegelikust kokkuhoiust"
+ },
+ {
+  "title": "Vaadake, kas see on teile jõukohane",
+  "text": "Arvutage, mida uus teenus lähiaastatel teie eelarvega teeb, sõltumata sellest, kas see on väärt.",
+  "link": "Loe eelarvemõjust"
+ },
+ {
+  "title": "Teadke, kui palju oma numbreid usaldada",
+  "text": "Leidke, millised eeldused kaaluvad enim, et näidata oma kindlust ja teada, kuhu lähemalt vaadata.",
+  "link": "Loe tundlikkusanalüüsist"
+ }
+]

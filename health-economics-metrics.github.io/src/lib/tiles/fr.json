@@ -1,0 +1,32 @@
+[
+ {
+  "title": "Voir ce que coûte vraiment chaque choix",
+  "text": "Comprenez pourquoi dépenser pour une chose, c'est renoncer à une autre, et expliquez clairement vos choix à tous.",
+  "link": "Lire sur le coût d'opportunité"
+ },
+ {
+  "title": "Mesurer la santé de façon compréhensible",
+  "text": "Découvrez l'année de vie pondérée par la qualité, une mesure unique de la durée et de la qualité de vie.",
+  "link": "Lire sur le QALY"
+ },
+ {
+  "title": "Savoir ce que votre argent rapporte",
+  "text": "Comparez le surcoût d'un traitement au gain de santé supplémentaire pour distinguer une bonne affaire d'un espoir coûteux.",
+  "link": "Lire sur le rapport coût-efficacité"
+ },
+ {
+  "title": "Distinguer les vraies économies des vœux pieux",
+  "text": "Vérifiez si le temps gagné devient de l'argent réellement dépensable ailleurs, avant de promettre une économie.",
+  "link": "Lire sur les vraies économies"
+ },
+ {
+  "title": "Voir si vous pouvez vous le permettre",
+  "text": "Évaluez l'effet d'un nouveau service sur votre budget des prochaines années, indépendamment de son rapport qualité-prix.",
+  "link": "Lire sur l'impact budgétaire"
+ },
+ {
+  "title": "Savoir dans quelle mesure se fier à ses chiffres",
+  "text": "Trouvez les hypothèses qui comptent le plus, pour montrer votre degré de confiance et où creuser davantage.",
+  "link": "Lire sur l'analyse de sensibilité"
+ }
+]

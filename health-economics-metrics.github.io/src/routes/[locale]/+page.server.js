@@ -2,6 +2,7 @@ import { render } from '#lib/markdown.js';
 import { book, localizeHtml, readmeSource } from '#lib/server/book.js';
 import { locales } from '#lib/server/content.js';
 import { localeLabel } from '#lib/locales.js';
+import { TILE_TOPICS } from '#lib/tiles.js';
 
 // This is the first page reached for each locale, so its entries() drives
 // prerendering for the whole [locale] subtree: the crawler discovers
@@ -81,8 +82,13 @@ export function load({ params }) {
 		.sort((a, b) => (a === 'en-001' ? -1 : b === 'en-001' ? 1 : a.localeCompare(b)))
 		.map((code) => ({ code, label: localeLabel(code) }));
 
+	const tileHrefs = TILE_TOPICS.map(
+		(slug) => order.find((e) => e.canonicalSlug === slug)?.href ?? `/${locale}/topics/${slug}/`
+	);
+
 	return {
 		title,
+		tileHrefs,
 		translations,
 		summary,
 		parts,
